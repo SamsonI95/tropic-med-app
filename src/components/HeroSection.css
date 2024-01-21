@@ -81,11 +81,10 @@
   
   .capacity-card {
     display: flex;
-    position: absolute;
+    transform: translateY(35rem);
+    /*position: absolute;
     top: 180%;
-    left: 8%;
-    /*height: 529px;
-    border: 1px solid red;*/
+    left: 8%;*/
   }
   
   .capacity-card-content {
@@ -102,19 +101,21 @@
     grid-template-columns: repeat(var(--num-cols), 1fr);
     grid-auto-rows: var(--row-height);
     gap: var(--gap);
-    position: relative;
+    /*position: relative;
     top: 20%;
-    left: 20px;
+    left: 20px;*/
   }
   
   .capacity-card-content {
     position: relative;
-    left: 5%;
+    left: 20%;
+   margin: 20px 0;
   }
   
   .capacity-icon {
     text-align: center;
-    padding: 10px;
+    margin-right: 20px;
+    transform: translateX(-35px);
   }
   
   .capacity-icon img,
@@ -140,10 +141,11 @@
   
   .capacity-content {
     width: 500px;
-    height: 301px;
-    position: relative;
+    margin-top: 50px;
+    transform: translateX(35px);
+    /*position: relative;
     top: 30%;
-    left: 15%;
+    left: 15%;*/
   }
   
   .capacity-content p {
@@ -165,7 +167,8 @@
   
   .feature-story-container {
     position: relative;
-    margin-top: 80%;
+    transform: translateY(35rem);
+    margin-bottom: 45%;
   }
   
   .feature-story-header {
@@ -196,12 +199,11 @@
   .stories-card {
     position: relative;
     padding: 20px;
-    width: 288px;
-    height: 580px;
+    width: 305px;
+    height: 590px;
     border-radius: 10px;
     border: 1px solid #d8d8d8;
-    margin-left: 40px;
-    overflow: hidden;
+    margin-left: 30px;
     /*float: left;
     transition: 0.6s ease-in-out;
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.26);*/
@@ -209,8 +211,6 @@
   
   .stories-card img {
     border-radius: 10px;
-    margin-left: -10px;
-    margin-top: -10px;
     margin-bottom: 15px;
   }
   
@@ -224,32 +224,29 @@
   
   .stories-card h4 {
     color: #1e1e1e;
-    font-size: 18px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 400;
     line-height: 160%; /* 28.8px */
     width: 268px;
     height: 120px;
-    flex-shrink: 0;
+    text-align: left;
   }
   
   .stories-card-bottom {
     display: flex;
-    position: relative;
-    top: 32px;
-    left: -5px;
+    transform: translateY(2rem) translateX(-6px);
   }
   
   .stories-card-bottom img {
     position: relative;
     margin-top: 10px;
-    left: 10px;
+    left: 5px;
   }
   
   .stories-card-bottom p {
     width: 83px;
     color: #1e1e1e;
-    font-family: Lato;
     font-size: 12px;
     font-style: normal;
     font-weight: 700;
@@ -257,14 +254,15 @@
   
   .stories-card-bottom p,
   h5 {
-    position: relative;
-    margin-top: 23px;
-    left: 16px;
+    transform: translateX(10px);
+    margin-top: 2rem;
+    /*position: relative;
+    
+    left: 16px;*/
   }
   
   .feature-story-footer {
     color: #1e1e1e;
-    font-family: Lato;
     font-size: 22px;
     font-style: normal;
     font-weight: 400;

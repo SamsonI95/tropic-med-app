@@ -1,8 +1,9 @@
 import React from "react";
 import "./HeroSection.css";
-import Accordion from "./Accordion.js";
+import Accordions from "./Accordion.js";
 import { Item } from "./Item.js";
 import { CapacityItem } from "./CapacityItem.js";
+import { AccordionData } from "./AccordionData.js";
 import { StoryData } from "./StoryData.js";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -427,7 +428,7 @@ function HeroSection() {
       </div>
       <div className="faq">
         <div className="accordion-container">
-          <Accordion />
+          <Accordions data={AccordionData} />
         </div>
       </div>
     </>

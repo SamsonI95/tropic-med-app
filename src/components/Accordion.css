@@ -1,0 +1,15 @@
+.accordion-toggle {
+  width: 607px;
+  height: 60px;
+  border-radius: 10px;
+  border: 2px solid #c5c5c5;
+}
+
+.accordion-toggle h3 {
+    color: #1E1E1E;
+font-family: Lato;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 170.023%; /* 30.604px */
+}
