@@ -4,7 +4,7 @@ import { Button } from "./Button";
 import { SidebarData } from "./SidebarData";
 import './NavBar.css'
 function NavBar() {
-  const [button, setButton] = useState(true);
+  const [button] = useState(true);
 
   //hamburger icon
   const [sidebar, setSidebar] = useState(false);
@@ -21,7 +21,7 @@ function NavBar() {
         <div className="bar"></div>
         <div className="bar"></div>
       </div>
-      <a className="logo">
+      <a className="logo" href="/">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="25"
