@@ -38,7 +38,7 @@ const Accordions = ({ data }) => {
           {expandedIndex === index && (
             <div className="accordion-content">
               <p>
-                <strong>Answer:</strong> {item.answer}
+               {item.answer}
               </p>
             </div>
           )}

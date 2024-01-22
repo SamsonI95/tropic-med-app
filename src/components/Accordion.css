@@ -1,15 +1,46 @@
+.accordion {
+   transform: translateX(27%);
+   margin-bottom: 2rem;
+}
+
 .accordion-toggle {
   width: 607px;
   height: 60px;
   border-radius: 10px;
-  border: 2px solid #c5c5c5;
+  border: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add smooth transition to the background color */
+}
+
+.accordion-toggle:hover {
+  background-color: #A3A3A3;/* Change the background color on hover for a visual effect */
 }
 
 .accordion-toggle h3 {
-    color: #1E1E1E;
-font-family: Lato;
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: 170.023%; /* 30.604px */
+  color: #1e1e1e;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.arrow {
+  font-size: 40px;
+  transition: transform 0.3s ease; /* Add smooth transition to the transform property */
+}
+
+.accordion-content {
+  margin-top: 1rem;
+  width: 607px;
+  height: 100;
+  overflow: hidden;
+  transition: height 0.3s ease; /* Add smooth transition to the max-height */
+}
+
+.accordion-content p {
+  margin: 0;
 }

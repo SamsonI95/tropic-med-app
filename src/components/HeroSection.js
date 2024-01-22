@@ -16,6 +16,15 @@ function HeroSection() {
     slidesToShow: 5,
     slidesToScroll: 1,
     swipeToSlide: true,
+    responsive: [
+      {
+        breakpoint: 430,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4
+        }
+      }
+    ]
   };
 
   return (

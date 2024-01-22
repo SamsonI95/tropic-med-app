@@ -10,3 +10,9 @@
 body {
   font-family: Poppins;
 }
+
+@media only screen and (max-width: 430px) {
+  * {
+    width: 100%;
+  }
+}
