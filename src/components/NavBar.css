@@ -176,6 +176,7 @@
   }
 
   .navbar-logo-text {
+    display: block;
     position: relative;
     left: 45%;
   }

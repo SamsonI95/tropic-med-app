@@ -8,7 +8,6 @@ footer {
 }
 
 .content-1 {
-    
   transform: translateY(51px);
   width: 25%;
 }
@@ -100,4 +99,80 @@ footer {
 
 .contact-links {
   transform: translateY(70px);
+}
+
+@media only screen and (max-width: 430px) {
+  footer {
+    width: 100%;
+    height: 697px;
+    display: block;
+    padding: 0 20px;
+  }
+
+  .content-1 {
+    width: 170px;
+  }
+
+  .content-1 .logo-text-container img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .content-1 h3 {
+    left: 2.3rem;
+    bottom: 1.5rem;
+  }
+
+  .content-1 .copyright-tag {
+    display: block;
+    top: 0;
+    left: 0;
+  }
+
+  .content-1 .copyright-tag span {
+    position: relative;
+    left: -4.5rem;
+  }
+
+  .content-1 .copyright-tag .icon-s {
+    font: 20px;
+  }
+
+  .content-1 .copyright-tag p {
+    margin: 0;
+    transform: translateX(2.4rem) translateY(-1rem);
+  }
+
+  .content-2,
+  .content-3 {
+    transform: translateX(0) translateY(6rem);
+  }
+
+  .content-4,
+  .content-5 {
+    transform: translateX(50%) translateY(-19.5rem);
+  }
+
+  .content-2 ul li,
+  .content-3 ul li,
+  .content-4 ul li,
+  .content-5 ul li {
+    margin-bottom: 30px;
+  }
+
+  .social-icons {
+    font-size: 20px;
+    transform: translateY(0);
+    display: flex;
+    width: 50px;
+  }
+
+  .social-icons span {
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+
+  .contact-links {
+    transform: translateY(0);
+  }
 }

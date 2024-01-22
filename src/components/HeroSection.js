@@ -21,10 +21,10 @@ function HeroSection() {
         breakpoint: 430,
         settings: {
           slidesToShow: 4,
-          slidesToScroll: 4
-        }
-      }
-    ]
+          slidesToScroll: 4,
+        },
+      },
+    ],
   };
 
   return (
@@ -436,6 +436,10 @@ function HeroSection() {
         </div>
       </div>
       <div className="faq">
+        <div className="faq-header">
+          <h3>FAQ</h3>
+          <div className="frequent-rectangle"></div>
+        </div>
         <div className="accordion-container">
           <Accordions data={AccordionData} />
         </div>

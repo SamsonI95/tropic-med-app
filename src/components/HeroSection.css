@@ -259,6 +259,22 @@ h5 {
     left: 16px;*/
 }
 
+.faq-header h3 {
+  text-align: center;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700; /* 68.009px */
+}
+
+.faq-header .frequent-rectangle {
+  width: 100px;
+  height: 10px;
+  background-color: #ff6b00;
+  position: relative;
+  left: 46%;
+  margin-bottom: 1rem;
+}
+
 .feature-story-footer {
   color: #1e1e1e;
   font-size: 22px;
@@ -382,6 +398,7 @@ h5 {
 
   .feature-story-container {
     transform: translateY(0);
+    margin-bottom: 10%;
   }
 
   .feature-story-header {
@@ -390,5 +407,57 @@ h5 {
 
   .feature-story-header .feature-rectangle {
     left: 33%;
+  }
+
+  .stories-contianer {
+    margin-left: 4%;
+  }
+
+  .stories-card {
+    width: 150px;
+    height: 365px;
+    padding: 10px;
+  }
+
+  .stories-card-item .stories-card:nth-child(n + 3) {
+    display: none;
+  }
+
+  .stories-card img {
+    width: 134px;
+    height: 140px;
+    margin: 0;
+  }
+
+  .stories-card h3 {
+    font-size: 12px;
+    width: 134px;
+    transform: translateY(1rem);
+  }
+
+  .stories-card h4 {
+    font-size: 8px;
+    width: 134px;
+    height: 60px;
+    transform: translateY(1.5rem);
+  }
+
+  .stories-card-bottom {
+    margin-top: 1rem;
+  }
+
+  .stories-card-bottom img {
+    width: 40px;
+    height: 20px;
+    transform: translateY(1.2rem);
+  }
+
+  .stories-card-bottom p,
+  h5 {
+    font-size: 6px;
+  }
+
+  .faq-header .frequent-rectangle {
+    left: 38%;
   }
 }

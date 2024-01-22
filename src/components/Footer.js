@@ -12,13 +12,13 @@ function Footer() {
     <>
       <footer>
         <div className="content-1">
-          <div className="logo-text-continer">
+          <div className="logo-text-container">
             <img src="assets/Logo (1).png" alt="tm-logo" />
             <h3>TropicMed</h3>
           </div>
           <div className="copyright-tag">
             <span>
-              <FontAwesomeIcon icon={faCopyright} />
+              <FontAwesomeIcon className="icon-s" icon={faCopyright} />
             </span>
             <p>Copyright 2022</p>
           </div>
