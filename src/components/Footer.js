@@ -26,48 +26,48 @@ function Footer() {
         <div className="content-2">
           <ul>
             <li>
-              <a href="#">Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
-              <a href="#">Featured Stories</a>
+              <a href="/">Featured Stories</a>
             </li>
             <li>
-              <a href="#">Profile </a>
+              <a href="/">Profile </a>
             </li>
             <li>
-              <a href="#">FAQs</a>
+              <a href="/">FAQs</a>
             </li>
           </ul>
         </div>
         <div className="content-3">
           <ul>
             <li>
-              <a href="#">Pharmacy</a>
+              <a href="/">Pharmacy</a>
             </li>
             <li>
-              <a href="#">Doctors Chat</a>
+              <a href="/">Doctors Chat</a>
             </li>
             <li>
-              <a href="#">Health Insurance</a>
+              <a href="/">Health Insurance</a>
             </li>
             <li>
-              <a href="#">Test Labs</a>
+              <a href="/">Test Labs</a>
             </li>
           </ul>
         </div>
         <div className="content-4">
           <ul>
             <li>
-              <a href="#">About Us</a>
+              <a href="/">About Us</a>
             </li>
             <li>
-              <a href="#">Terms & Conditions</a>
+              <a href="/">Terms & Conditions</a>
             </li>
             <li>
-              <a href="#">Referal</a>
+              <a href="/">Referal</a>
             </li>
             <li>
-              <a href="#">Privacy</a>
+              <a href="/">Privacy</a>
             </li>
           </ul>
         </div>
@@ -87,10 +87,10 @@ function Footer() {
           <div className="contact-links">
             <ul>
               <li>
-                <a href="#">Info@blockpegcapital.co</a>
+                <a href="/">Info@blockpegcapital.co</a>
               </li>
               <li>
-                <a href="#">Info@blockpegcapital.co</a>
+                <a href="/">Info@blockpegcapital.co</a>
               </li>
             </ul>
           </div>

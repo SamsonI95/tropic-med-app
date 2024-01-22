@@ -30,7 +30,7 @@ function HeroSection() {
   return (
     <>
       <div className="welcome-container">
-        <img src="/assets/Rectangle 83.jpg" alt="welcome Image" />
+        <img src="/assets/Rectangle 83.jpg" alt="welcome" />
         <div className="welcome-container-text">
           <span className="tropic">Tropic</span>
           <span className="med">Med</span>, Healthcare service at your finger
@@ -38,7 +38,7 @@ function HeroSection() {
         </div>
       </div>
       <div className="sponsors-container">
-        <a className="sponsors1">
+        <a className="sponsors1" href="/">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="105"
@@ -75,7 +75,7 @@ function HeroSection() {
             </defs>
           </svg>
         </a>
-        <a className="sponsors2">
+        <a className="sponsors2" href="/">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="130"
@@ -221,7 +221,7 @@ function HeroSection() {
             </defs>
           </svg>
         </a>
-        <a className="sponsors3">
+        <a className="sponsors3" href="/">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="124"
@@ -366,7 +366,7 @@ function HeroSection() {
             {Item.map((d) => (
               <>
                 <div className="carousel-icon">
-                  <img src={d.icon} />
+                  <img src={d.icon} alt="types"/>
                   <p>{d.text}</p>
                 </div>
               </>
@@ -382,7 +382,7 @@ function HeroSection() {
           minutes, I could consult with a doctor, receive a prescription, place
           my order, and have my medication delivered."
         </h3>
-        <img src="/assets/Rectangle 93.jpg" />
+        <img src="/assets/Rectangle 93.jpg" alt="ol1" />
       </div>
       <div className="capacity-card">
         <div className="capacity-card-content">
@@ -390,7 +390,7 @@ function HeroSection() {
             {CapacityItem.map((d) => (
               <>
                 <div className="capacity-icon">
-                  <img src={d.icon} />
+                  <img src={d.icon} alt="ol2"/>
                   <h3>{d.counter}</h3>
                   <p>{d.text}</p>
                 </div>
@@ -418,11 +418,11 @@ function HeroSection() {
             {StoryData.map((d) => (
               <>
                 <div className="stories-card">
-                  <img src={d.image} />
+                  <img src={d.image} alt="ol3" />
                   <h3>{d.header}</h3>
                   <h4>{d.description}</h4>
                   <div className="stories-card-bottom">
-                    <img src={d.userImage} id="userImage" />
+                    <img src={d.userImage} id="userImage" alt="ol4" />
                     <p>{d.userName}</p>
                     <h5>{d.date}</h5>
                   </div>
