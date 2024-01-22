@@ -7,8 +7,6 @@ import "./Accordion.css"; // You can create a CSS file for styling
 //Icons
 import { IonIcon } from "@ionic/react";
 import { addCircleOutline, removeCircleOutline } from "ionicons/icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCirclePlus, faCircleMinus } from "@fortawesome/free-solid-svg-icons";
 
 
 const Accordions = ({ data }) => {
