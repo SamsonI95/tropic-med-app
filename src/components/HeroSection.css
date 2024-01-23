@@ -292,7 +292,7 @@ h5 {
   color: #ff6b00;
 }
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 720px) {
   .nav-logo-text {
     display: block;
   }
