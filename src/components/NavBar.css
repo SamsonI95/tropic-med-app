@@ -7,6 +7,7 @@
   width: 100%;
   padding: 20px 50px 40px 50px;
   display: flex;
+  margin-bottom: 4rem;
 }
 
 .navbar-leftSide a {
