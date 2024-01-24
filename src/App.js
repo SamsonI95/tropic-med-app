@@ -1,11 +1,19 @@
+//App
 import React from 'react';
-import NavBar from './components/NavBar';
-import Footer from './components/Footer';
-import Home from './components/pages/Home';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import '@ionic/react/css/core.css';
+
+//Components
+import NavBar from './components/Reusables/NavBar';
+import Footer from './components/Reusables/Footer';
+import Home from './components/pages/Home';
+
+//Icon components
 import { setupIonicReact } from '@ionic/react';
-import './App.css';
+
+//Styles
+import './App.css'
+import '@ionic/react/css/core.css';
+;
 
 setupIonicReact();
 

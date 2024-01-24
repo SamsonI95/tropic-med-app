@@ -1,11 +1,18 @@
+//App
 import React from "react";
-import "./HeroSection.css";
+
+//Components
 import Accordions from "../Reusables/Accordion.js";
+import Slider from "react-slick";
+
+//Data
 import { Item } from "../Data types/Item.js";
 import { CapacityItem } from "../Data types/CapacityItem.js";
 import { AccordionData } from "../Data types/AccordionData.js";
 import { StoryData } from "../Data types/StoryData.js";
-import Slider from "react-slick";
+
+//Styles
+import "./HeroSection.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
