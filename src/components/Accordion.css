@@ -45,13 +45,13 @@
   margin: 0;
 }
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 720px) {
   .accordion {
     transform: translateX(0);
   }
 
 .accordion-container {
-  transform: translateX(1rem);
+  transform: translateX(15rem);
 }
 
   .accordion-toggle {
