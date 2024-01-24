@@ -1,0 +1,30 @@
+.floating-label-input {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.label {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  transition: transform 0.2s ease-out, font-size 0.2s ease-out;
+  transform-origin: top left;
+  pointer-events: none;
+}
+
+.input {
+  width: 404px;
+  height: 48px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 16px;
+  border: 1px solid #777;
+  outline: none;
+  text-indent: 15px;
+}
+
+.floating-label-input.active .label {
+  transform: translateY(-100%) ;
+  font-size: 12px;
+  color: #777;
+}

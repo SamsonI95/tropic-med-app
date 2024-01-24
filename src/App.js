@@ -1,31 +1,38 @@
 //App
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 //Components
-import NavBar from './components/Reusables/NavBar';
-import Footer from './components/Reusables/Footer';
-import Home from './components/pages/Home';
+import NavBar from "./components/Reusables/NavBar";
+import Footer from "./components/Reusables/Footer";
+import HideFooter from "./components/Reusables/HideFooter";
+import Home from "./components/pages/Home";
+import RegSelect from "./components/pages/RegSelect";
+import CustomerReg from "./components/PageComponents/CustomerReg";
+import DoctorReg from "./components/PageComponents/DoctorReg";
 
 //Icon components
-import { setupIonicReact } from '@ionic/react';
+import { setupIonicReact } from "@ionic/react";
 
 //Styles
-import './App.css'
-import '@ionic/react/css/core.css';
-;
-
+import "./App.css";
+import "@ionic/react/css/core.css";
 setupIonicReact();
 
 function App() {
   return (
     <>
       <Router>
-        <NavBar />
+          <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/reg-select" element={<RegSelect />} />
+          <Route path="/customer-reg" element={<CustomerReg />} />
+          <Route path="/doc-reg" element={<DoctorReg />} />
         </Routes>
-        <Footer />
+        <HideFooter>
+          <Footer />
+        </HideFooter>
       </Router>
     </>
   );

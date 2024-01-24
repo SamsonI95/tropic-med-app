@@ -1,9 +1,14 @@
-import React from 'react'
+//App
+import React from 'react';
 
-const RegSelect = () => {
+//Component
+import UserSelect from "../PageComponents/UserSelect";
+
+
+function RegSelect () {
   return (
-    <div>RegSelect</div>
+    <UserSelect></UserSelect>
   )
 }
 
-export default RegSelect
+export default RegSelect;

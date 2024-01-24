@@ -4,7 +4,7 @@ import { Button } from "./Button";
 import { SidebarData } from "../Data types/SidebarData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
-import './NavBar.css'
+import "./NavBar.css";
 function NavBar() {
   const [button] = useState(true);
 
@@ -67,9 +67,11 @@ function NavBar() {
       </nav>
       <div className="navbar-rightSide">
         {button && (
-          <Button buttonStyle="btn--noutline" buttonSize="btn--sl">
-            Register
-          </Button>
+          <Link to="/reg-select">
+            <Button buttonStyle="btn--noutline" buttonSize="btn--sl">
+              Register
+            </Button>
+          </Link>
         )}
         {button && (
           <Button buttonStyle="btn--primary" buttonSize="btn--small">
