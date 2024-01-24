@@ -90,7 +90,7 @@
 
 .navbar-toggle > i {
   margin-top: 15px;
-  /*margin-left: 13.5rem;*/
+  margin-left: 13.5rem;
   color: var(--primary-g);
   font-size: 25px;
   cursor: pointer;
@@ -199,8 +199,8 @@
 
   .navbar-toggle > i {
     position: relative;
-    /*left: 35%;
-    right: -5%;*/
+    left: 35%;
+    /*right: -5%;*/
   }
 
   .nav-text {
