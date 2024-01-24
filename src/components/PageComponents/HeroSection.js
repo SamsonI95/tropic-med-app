@@ -1,10 +1,10 @@
 import React from "react";
 import "./HeroSection.css";
-import Accordions from "./Accordion.js";
-import { Item } from "./Item.js";
-import { CapacityItem } from "./CapacityItem.js";
-import { AccordionData } from "./AccordionData.js";
-import { StoryData } from "./StoryData.js";
+import Accordions from "../Reusables/Accordion.js";
+import { Item } from "../Data types/Item.js";
+import { CapacityItem } from "../Data types/CapacityItem.js";
+import { AccordionData } from "../Data types/AccordionData.js";
+import { StoryData } from "../Data types/StoryData.js";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

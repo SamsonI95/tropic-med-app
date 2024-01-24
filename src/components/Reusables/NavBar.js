@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "./Button";
-import { SidebarData } from "./SidebarData";
+import { SidebarData } from "../Data types/SidebarData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import './NavBar.css'
