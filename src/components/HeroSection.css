@@ -167,6 +167,7 @@ p {
 .feature-story-container {
   position: relative;
   transform: translateY(35rem);
+  margin-top: 5rem;
   margin-bottom: 45%;
 }
 
@@ -188,7 +189,7 @@ p {
 }
 
 .stories-contianer {
-  margin-top: 30px;
+  margin-top: 5rem;
 }
 
 .stories-card-item {
@@ -260,6 +261,10 @@ h5 {
     left: 16px;*/
 }
 
+.faq {
+  margin-top: 5rem;
+}
+
 .faq-header h3 {
   text-align: center;
   font-size: 40px;
@@ -272,8 +277,8 @@ h5 {
   height: 10px;
   background-color: #ff6b00;
   position: relative;
-  left: 46%;
-  margin-bottom: 1rem;
+  left: 46.5%;
+  margin-bottom: 4rem;
 }
 
 .feature-story-footer {
