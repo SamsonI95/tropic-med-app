@@ -37,8 +37,9 @@
 
 .carousel-container {
   padding: 10px;
-  margin-top: 10px;
-  margin-left: 45px;
+  margin-top: 70px;
+  margin-left: 5rem;
+  transform: translateX(20px);
 }
 
 .carousel-container > .carousel-content > Slider {
@@ -49,7 +50,7 @@
 
 .testimony-card {
   position: absolute;
-  top: 110%;
+  transform: translateY(8rem);
   left: 4%;
   display: flex;
   align-items: center;
@@ -80,6 +81,7 @@
 .capacity-card {
   display: flex;
   transform: translateY(35rem);
+  margin-top: 5rem;
   /*position: absolute;
     top: 180%;
     left: 8%;*/
