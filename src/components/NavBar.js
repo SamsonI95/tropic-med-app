@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "./Button";
 import { SidebarData } from "./SidebarData";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import './NavBar.css'
 function NavBar() {
   const [button] = useState(true);
@@ -47,7 +49,9 @@ function NavBar() {
       <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
         <ul className="nav-menu-items">
           <li className="navbar-toggle">
-            <i className="fas fa-times" onClick={showSidebar}></i>
+            <i onClick={showSidebar}>
+              <FontAwesomeIcon icon={faXmark} />
+            </i>
           </li>
           {SidebarData.map((item, index) => {
             return (
