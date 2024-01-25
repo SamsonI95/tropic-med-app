@@ -52,6 +52,7 @@
   height: 48px;
   justify-content: center;
   align-items: center;
+  color: #777777;
   border: linear-gradient(#777777, #d9d9d9);
   border-radius: 10px;
   text-indent: 20px;
@@ -66,10 +67,11 @@
   transform: translateY(0);
 }
 
-.user-redirect {
+.cuser-redirect {
   transform: translateY(0);
 }
 
 .signin {
+  color: #0F3DDE;
   text-decoration: none;
 }

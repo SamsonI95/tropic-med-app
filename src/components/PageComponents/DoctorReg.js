@@ -18,32 +18,32 @@ const CustomerReg = () => {
       <div className="docreg-container">
         <h3>Welcome to TropicMed</h3>
         <h4>Enter your Credentials to Register an account</h4>
-        <FloatingLabelInput label="Username" type="name" name="First Name" />
-        <FloatingLabelInput label="Username" type="name" name="Last Name" />
+        <FloatingLabelInput label="First Name" type="name" name="Username" />
+        <FloatingLabelInput label="Last Name" type="name" name="Username" />
         <FloatingLabelInput
           label="Specialization"
           type="text"
           name="Specialization"
         />
         <FloatingLabelInput
-          label="licence-authority"
+          label="Licence Authority"
           type="text"
           name="Licence Authority"
         />
         <FloatingLabelInput
-          label="licence-number"
-          type="number"
+          label="Licence Number"
+          type="text"
           name="Licence Number"
         />
-        <FloatingLabelInput label="phone" type="phone" name="Phone Number" />
+        <FloatingLabelInput label="Phone Number" type="phone" name="Phone Number" />
         <FloatingLabelInput
-          label="Username"
+          label="Email address"
           type="email"
           name="Email address"
         />
         <FloatingLabelInput label="Password" type="password" name="Password" />
         <FloatingLabelInput
-          label="Password"
+          label="Confirm Password"
           type="password"
           name="Confirm Password"
         />
@@ -63,7 +63,7 @@ const CustomerReg = () => {
             </Button>
           )}
         </div>
-        <div className="user-redirect">
+        <div className="duser-redirect">
           Already have an account?{" "}
           <Link className="signin" to="/sign-in">
             {" "}

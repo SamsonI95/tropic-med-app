@@ -25,7 +25,7 @@ const UserSelect = () => {
         navigate("/doc-reg");
         break;
       case "Service Provider":
-        navigate("/service-provider-registration");
+        navigate("/org-reg");
         break;
       default:
         // Handle default case or show an error message

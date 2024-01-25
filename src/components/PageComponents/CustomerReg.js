@@ -36,7 +36,7 @@ const CustomerReg = () => {
             </Button>
           )}
         </div>
-        <div className="user-redirect">
+        <div className="cuser-redirect">
           Already have an account?{" "}
           <Link className="signin" to="/sign-in">
             {" "}
