@@ -14,7 +14,7 @@ function NavBar() {
 
   return (
     <>
-      <Link to="/" className="navbar-logo-text">
+      <Link to="/home" className="navbar-logo-text">
         <span className="tropic">Tropic</span>
         <span className="med">Med</span>
       </Link>
@@ -23,7 +23,7 @@ function NavBar() {
         <div className="bar"></div>
         <div className="bar"></div>
       </div>
-      <a className="logo" href="/">
+      <Link to="/home" className="logo" >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="25"
@@ -45,7 +45,7 @@ function NavBar() {
             fill="#FF6B00"
           />
         </svg>
-      </a>
+      </Link>
       <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
         <ul className="nav-menu-items">
           <li className="navbar-toggle">
