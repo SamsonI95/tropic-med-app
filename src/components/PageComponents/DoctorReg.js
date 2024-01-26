@@ -35,7 +35,11 @@ const CustomerReg = () => {
           type="text"
           name="Licence Number"
         />
-        <FloatingLabelInput label="Phone Number" type="phone" name="Phone Number" />
+        <FloatingLabelInput
+          label="Phone Number"
+          type="phone"
+          name="Phone Number"
+        />
         <FloatingLabelInput
           label="Email address"
           type="email"
@@ -70,7 +74,20 @@ const CustomerReg = () => {
             Verify
           </Link>
         </div>
-        <div className="social-reg"></div>
+        <div className="social-reg">
+          {button && (
+            <Button buttonStyle="btn--outline" buttonSize="btn--social">
+              <img src="assets/icons8-google-24.png" alt="google-icon" />
+              Sign in with Google
+            </Button>
+          )}
+          {button && (
+            <Button buttonStyle="btn--outline" buttonSize="btn--social">
+              <img src="assets/icons8-apple-logo-24.png" alt="apple-icon" />
+              Sign in with Apple
+            </Button>
+          )}
+        </div>
       </div>
     </div>
   );

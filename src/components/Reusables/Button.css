@@ -30,6 +30,13 @@
   margin-right: 50px;
 }
 
+.btn--outline {
+  border: 1px solid #242424;
+  background: none;
+  padding: 0 10px 0 10px;
+  margin-right: 30px;
+}
+
 .btn--secondary {
   background-color: var(--secondary);
   color: var(--text1);
@@ -53,6 +60,13 @@
 
 .btn--sl:hover {
   color: var(--primary);
+}
+
+.btn--social {
+  width: 220px;
+  height: 35px;
+  border-radius: 12px;
+  padding-bottom: 5px;
 }
 
 .btn--medium {

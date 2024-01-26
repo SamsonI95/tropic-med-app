@@ -7,6 +7,7 @@ import NavBar from "./components/Reusables/NavBar";
 import Footer from "./components/Reusables/Footer";
 import HideFooter from "./components/Reusables/HideFooter";
 import Home from "./components/pages/Home";
+import SignIn from "./components/pages/SignIn";
 import RegSelect from "./components/pages/RegSelect";
 import CustomerReg from "./components/PageComponents/CustomerReg";
 import DoctorReg from "./components/PageComponents/DoctorReg";
@@ -28,6 +29,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/signin" element={<SignIn />} />
           <Route path="/reg-select" element={<RegSelect />} />
           <Route path="/customer-reg" element={<CustomerReg />} />
           <Route path="/doc-reg" element={<DoctorReg />} />

@@ -60,7 +60,7 @@
 }
 
 .terms {
-  color: #0F3DDE;
+  color: #0f3dde;
   text-decoration: none;
 }
 
@@ -73,6 +73,16 @@
 }
 
 .signin {
-  color: #0F3DDE;
+  color: #0f3dde;
   text-decoration: none;
+}
+
+.social-reg Button {
+  text-align: center;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.social-reg img {
+  transform: translateY(5px);
 }

@@ -23,7 +23,7 @@ function NavBar() {
         <div className="bar"></div>
         <div className="bar"></div>
       </div>
-      <Link to="/home" className="logo" >
+      <Link to="/home" className="logo">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="25"
@@ -74,9 +74,11 @@ function NavBar() {
           </Link>
         )}
         {button && (
-          <Button buttonStyle="btn--primary" buttonSize="btn--small">
-            Sign In
-          </Button>
+          <Link to="/signin">
+            <Button buttonStyle="btn--primary" buttonSize="btn--small">
+              Sign In
+            </Button>
+          </Link>
         )}
       </div>
     </>

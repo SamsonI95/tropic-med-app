@@ -38,21 +38,9 @@ const OrgReg = () => {
           type="text"
           name="Business Type"
         />
-        <FloatingLabelInput
-          label="CAC Number"
-          type="text"
-          name="CAC Number"
-        />
-        <FloatingLabelInput
-          label="TIN Number"
-          type="phone"
-          name="TIN Number"
-        />
-        <FloatingLabelInput
-          label="Password"
-          type="password"
-          name="Password"
-        />
+        <FloatingLabelInput label="CAC Number" type="text" name="CAC Number" />
+        <FloatingLabelInput label="TIN Number" type="phone" name="TIN Number" />
+        <FloatingLabelInput label="Password" type="password" name="Password" />
         <FloatingLabelInput label="Password" type="password" name="Password" />
         <FloatingLabelInput
           label="Confirm Password"
@@ -82,7 +70,20 @@ const OrgReg = () => {
             Verify
           </Link>
         </div>
-        <div className="social-reg"></div>
+        <div className="social-reg">
+          {button && (
+            <Button buttonStyle="btn--outline" buttonSize="btn--social">
+              <img src="assets/icons8-google-24.png" alt="google-icon" />
+              Sign in with Google
+            </Button>
+          )}
+          {button && (
+            <Button buttonStyle="btn--outline" buttonSize="btn--social">
+              <img src="assets/icons8-apple-logo-24.png" alt="apple-icon" />
+              Sign in with Apple
+            </Button>
+          )}
+        </div>
       </div>
     </div>
   );

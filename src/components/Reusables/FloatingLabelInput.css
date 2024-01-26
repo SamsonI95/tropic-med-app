@@ -5,11 +5,17 @@
 
 .label {
   position: absolute;
-  top: 15px;
-  left: 15px;
-  transition: transform 0.2s ease-out, font-size 0.2s ease-out;
-  transform-origin: top left;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  padding: 0 4px;
+  font-size: 16px;
+  color: #777;
   pointer-events: none;
+  transition: all 0.2s;
+  z-index: 1;
+  background-color: white; /* Add this line */
+  padding:  5px;
 }
 
 .input {
@@ -21,10 +27,17 @@
   border: 1px solid #777;
   outline: none;
   text-indent: 15px;
+  transition: border-color 0.2s; /* Add this line */
 }
 
 .floating-label-input.active .label {
-  transform: translateY(-100%) ;
+  top: 9px;
+  right: 5px;
+  transform: translateY(-100%);
   font-size: 12px;
   color: #777;
+  width: fit-content;
+  border: none;
 }
+
+

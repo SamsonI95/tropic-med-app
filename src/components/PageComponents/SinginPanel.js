@@ -7,40 +7,45 @@ import FloatingLabelInput from "../Reusables/FloatingLabelInput";
 import { Button } from "../Reusables/Button";
 
 //Style
-import "./CustomerrReg.css";
 
-const CustomerReg = () => {
+import "./SinginPanel.css";
+
+const SinginPanel = () => {
   const [button] = useState(true);
 
   return (
-    <div className="creg-main-container">
-      <img src="assets/Rectangle 104.png" alt="doc-smile" className="image-1" />
-      <div className="creg-container">
+    <div className="sgn-main-container">
+      <img src="assets/Component 2.png" alt="pills" className="image-3" />
+      <div className="sgn-container">
         <h3>Welcome to TropicMed</h3>
-        <h4>Enter your Credentials to Register an account</h4>
+        <h4>Enter your Credentials to Access an account</h4>
         <FloatingLabelInput
-          label="Username"
+          label="Email address"
           type="email"
           name="Email address"
         />
         <FloatingLabelInput label="Password" type="password" name="Password" />
-        <FloatingLabelInput
-          label="Confirm Password"
-          type="password"
-          name="Confirm Password"
-        />
-        <div className="creg-button">
+        <div className="sgn-button">
           {button && (
             <Button buttonStyle="btn--primary" buttonSize="btn--medium">
-              Register
+              Sign In
             </Button>
           )}
         </div>
-        <div className="cuser-redirect">
-          Already have an account?{" "}
+        <div className="sgn-forgot">
           <Link className="signin" to="/sign-in">
+            Forgot Password?
+          </Link>
+        </div>
+        <div className="sgn-validate">
+          <input type="checkbox" />
+          <p>Remeber for 30 days</p>
+        </div>
+        <div className="cuser-redirect">
+          Don't have an account?{" "}
+          <Link className="signup" to="/reg-select">
             {" "}
-            Sign in
+            Sign Up
           </Link>
         </div>
         <div className="social-reg">
@@ -62,4 +67,4 @@ const CustomerReg = () => {
   );
 };
 
-export default CustomerReg;
+export default SinginPanel;

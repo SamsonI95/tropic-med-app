@@ -1,11 +1,11 @@
-.creg-main-container {
+.sgn-main-container {
   width: 100%;
   height: 120vh;
   display: flex;
   overflow: visible;
 }
 
-.image-1 {
+.image-3 {
   height: 1101px;
   left: 0;
   object-fit: cover;
@@ -15,7 +15,7 @@
   width: 1440px;
 }
 
-.creg-container {
+.sgn-container {
   width: 593px;
   height: 650px;
   display: flex;
@@ -29,7 +29,7 @@
   z-index: 1;
 }
 
-.creg-container h3 {
+.sgn-container h3 {
   color: #1e1e1e;
   text-align: center;
   font-size: 32px;
@@ -38,7 +38,7 @@
   line-height: normal;
 }
 
-.creg-container h4 {
+.sgn-container h4 {
   color: #000;
   font-size: 18px;
   font-style: normal;
@@ -63,12 +63,25 @@
   outline: none;
 }
 
-.creg-button {
+.sgn-button {
   transform: translateY(0);
 }
 
 .cuser-redirect {
   transform: translateY(0);
+}
+
+.sgn-validate {
+  display: inline-flex;
+}
+
+.sgn-validate p {
+  transform: translateX(10px) translateY(6px);
+}
+
+.sgn-forgot {
+  color: #0f3dde;
+  text-decoration: none;
 }
 
 .signin {

@@ -1,13 +1,14 @@
 //App
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 //Component
 import { Button } from "../Reusables/Button";
 
 //Style
 import "./UserSelect.css";
-import { Link } from "react-router-dom";
+
 
 const UserSelect = () => {
   const [button] = useState(true);
