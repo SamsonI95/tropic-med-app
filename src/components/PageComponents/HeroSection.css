@@ -311,14 +311,14 @@ h5 {
     width: 232px;
     line-height: normal;
     margin-top: 20px;
-    left: 15rem;
-    top: 18rem;
+    left: 10rem;
+    top: 15rem;
     /*z-index: -1;*/
   }
 
   .sponsors-container {
     position: relative;
-    transform: translateX(10%);
+    transform: translateX(4rem);
   }
 
   .sponsors-container > a > svg {
@@ -353,20 +353,20 @@ h5 {
     width: 400px;
     height: 270px;
     top: 0;
-    left: 20%;
+    left: 10%;
   }
 
   .testimony-card h3 {
     font-size: 16px;
     top: 50%;
-    left: 20%;
+    left: 10%;
     height: 182px;
     transform: translateY(50px);
   }
 
   .capacity-card {
     display: flex;
-    width: 100%;
+    width: 500px;
     height: 700px;
     transform: translateY(6rem);
   }
@@ -387,13 +387,14 @@ h5 {
     height: 500px;
     overflow: visible;
     --row-height: 120px;
+    transform: translateX(2rem);
   }
 
   .capacity-content {
     flex: 2;
     transform: translateX(10px);
     margin: 0;
-    width: 700px;
+    width: 480px;
     height: 250px;
     padding: 0 10px;
     overflow: visible;
@@ -413,11 +414,12 @@ h5 {
   }
 
   .feature-story-header .feature-rectangle {
-    left: 39%;
+    left: 36%;
   }
 
   .stories-contianer {
-    margin-left: 20%;
+    margin-top: 3rem;
+    margin-left: 15%;
   }
 
   .stories-card {
