@@ -404,12 +404,12 @@ h5 {
 
   .capacity-content {
     flex: 2;
-    transform: translateX(10px);
+    transform: translateX(8px);
     margin: 0;
     width: 450px;
     height: 250px;
     padding: 0 10px;
-    overflow: visible;
+    /*overflow: visible;*/
   }
 
   .capacity-content p {
