@@ -354,13 +354,13 @@ h5 {
     width: 400px;
     height: 270px;
     top: 0;
-    left: 4.3%;
+    left: 5%;
   }
 
   .testimony-card h3 {
     font-size: 16px;
     top: 50%;
-    left: 5%;
+    left: 4.3%;
     height: 182px;
     transform: translateY(50px);
   }
