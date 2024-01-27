@@ -468,7 +468,7 @@ h5 {
   }
 
   .stories-card-bottom:first-child {
-    transform: translateY(1rem);
+    transform: translateY(4rem);
   }
 
   .stories-card-bottom img {
