@@ -176,7 +176,7 @@
 
   .nav-text a {
     align-items: center;
-    font-size: 27px;
+    font-size: 20px;
   }
 
   .logo > svg {
@@ -208,7 +208,7 @@
 
   .nav-text {
     position: relative;
-    left: 35%;
+    left: 30%;
   }
 
   .nav-menu-items {
