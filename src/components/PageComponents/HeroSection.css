@@ -328,6 +328,7 @@ h5 {
 
   .carousel-container {
     margin-left: 5px;
+    transform: translateX(-5px);
   }
 
   .carousel-icon img {
