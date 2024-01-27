@@ -416,7 +416,7 @@ h5 {
   }
 
   .feature-story-container {
-    transform: translateY(0);
+    transform: translateY(-2rem);
     margin-top: 0;
     margin-bottom: 10%;
   }
