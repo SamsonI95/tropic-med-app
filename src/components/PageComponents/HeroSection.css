@@ -395,7 +395,7 @@ h5 {
     --row-height: 120px;
     transform: translateX(2rem);
 
-    
+
     --num-cols: 3;
     grid-template-columns: repeat(var(--num-cols), 1fr);
     grid-auto-rows: var(--row-height);
@@ -465,6 +465,10 @@ h5 {
 
   .stories-card-bottom {
     margin-top: 1rem;
+  }
+
+  .stories-card-bottom:first-child {
+    transform: translateY(1rem);
   }
 
   .stories-card-bottom img {
