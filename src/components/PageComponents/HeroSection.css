@@ -431,13 +431,13 @@ h5 {
 
   .stories-contianer {
     margin-top: 3rem;
-    margin-left: 15%;
+    margin-left: 10%;
   }
 
   .stories-card {
-    width: 170px;
+    width: 160px;
     height: 385px;
-    padding: 10px;
+    padding: 12px;
   }
 
   .stories-card-item .stories-card:nth-child(n + 3) {
