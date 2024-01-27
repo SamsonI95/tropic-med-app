@@ -467,8 +467,8 @@ h5 {
     margin-top: 1rem;
   }
 
-  .stories-card-bottom:first-child {
-    margin-top: 3rem;
+  .stories-card-item .stories-card-bottom:first-child {
+    transform: translateY(4rem);
   }
 
   .stories-card-bottom img {
