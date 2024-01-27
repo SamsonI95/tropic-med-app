@@ -482,6 +482,10 @@ h5 {
     font-size: 6px;
   }
 
+  .faq {
+    margin-top: 2rem;
+  }
+
   .faq-header .frequent-rectangle {
     left: 40%;
   }
