@@ -1,0 +1,12 @@
+NOTES ON WHAT FILES I ALTERED SINCE THE LAST PUSH
+
+1 --  Added "firebase.js" & "firebase_service.js" to the src folder. It was initially one "firebase.js" file, but I had to split some of the code into a new "firebase_service.js" file to resolve a repeating circular dependency issue.
+    
+    -In the firebase_service.js file you will have to change the "firebaseConfig" const since we currently aren't using the same firebase account. (I recommend creating a fresh database on your own google account)
+
+2 --  In "CustomerReg.js" in the "page components" folder; 
+    -(lines 19 - 33)      Defined some backend functions, variables, and useState hooks
+    -(lines 46 & 52)      Added an onChange property to the floating input labels to set the input values in place
+    -(line 61)            Added an onClick property to the register button to submit the values to the database 
+
+
