@@ -9,8 +9,29 @@ import { Button } from "../Reusables/Button";
 //Style
 import "./CustomerrReg.css";
 
+//TORY Firebase
+import { addUser } from "../../firebase_service";
+
 const CustomerReg = () => {
   const [button] = useState(true);
+
+
+  //TORY backend
+  const handleSubmit = async () => {
+  try {
+    await addUser(username, password);
+    console.log("User added successfully!");
+    // Handle successful registration (e.g., clear input fields, display a success message)
+  } catch (error) {
+    console.error("Error adding user:", error);
+    // Handle errors appropriately (e.g., display error messages)
+  }
+};
+
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  // const [confirmPassword, setConfirmPassword] = useState("");
+
 
   return (
     <div className="creg-main-container">
@@ -22,8 +43,14 @@ const CustomerReg = () => {
           label="Username"
           type="email"
           name="Email address"
+          onChange={(event) => setUsername(event.target.value)}
         />
-        <FloatingLabelInput label="Password" type="password" name="Password" />
+        <FloatingLabelInput 
+          label="Password"
+          type="password"
+          name="Password"
+          onChange={(event) => setPassword(event.target.value)}
+        />
         <FloatingLabelInput
           label="Confirm Password"
           type="password"
@@ -31,7 +58,7 @@ const CustomerReg = () => {
         />
         <div className="creg-button">
           {button && (
-            <Button buttonStyle="btn--primary" buttonSize="btn--medium">
+            <Button buttonStyle="btn--primary" buttonSize="btn--medium" onClick={handleSubmit}>
               Register
             </Button>
           )}
