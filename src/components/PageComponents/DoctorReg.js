@@ -9,7 +9,7 @@ import { Button } from "../Reusables/Button";
 //Style
 import "./DoctorReg.css";
 
-const CustomerReg = () => {
+const DocReg = () => {
   const [button] = useState(true);
 
   return (
@@ -93,4 +93,4 @@ const CustomerReg = () => {
   );
 };
 
-export default CustomerReg;
+export default DocReg;
