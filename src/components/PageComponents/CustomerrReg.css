@@ -63,12 +63,65 @@
   outline: none;
 }
 
+.floating-input-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.floating-input {
+  width: 404px;
+  height: 48px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 16px;
+  border: 1px solid #777;
+  outline: none;
+  text-indent: 15px;
+  transition: border-color 0.2s; 
+}
+
+.floating-input:focus,
+.floating-input:not(:placeholder-shown) {
+  border-color: #777;
+}
+
+.floating-input:not(:placeholder-shown) + label {
+  font-size: 12px;
+  color: #777;
+  top: -12px;
+  left: 0;
+}
+
+.password {
+  margin-top: 20px;
+}
+
+.cpassword {
+  margin-top: -25px;
+}
+
+.password-input-container.error {
+  border: 2px solid red;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
 .creg-button {
   transform: translateY(0);
 }
 
 .cuser-redirect {
   transform: translateY(0);
+}
+
+.password-visibility-toggle {
+  transform: translateX(-2.5rem);
+  color: #777777;
+  border: none;
 }
 
 .signin {
@@ -84,4 +137,15 @@
 
 .social-reg img {
   transform: translateY(5px);
+}
+
+#email {
+  position: relative;
+  left: 2px;
+}
+
+#password {
+  margin-top: -20px;
+  position: relative;
+  left: 8px;
 }

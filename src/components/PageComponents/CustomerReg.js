@@ -1,64 +1,103 @@
 //App
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { auth } from "../../config/firebase";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 
 //Component
-import FloatingLabelInput from "../Reusables/FloatingLabelInput";
+
 import { Button } from "../Reusables/Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
 //Style
 import "./CustomerrReg.css";
 
-//TORY Firebase
-import { addUser } from "../../firebase_service";
-
 const CustomerReg = () => {
   const [button] = useState(true);
-
-
-  //TORY backend
-  const handleSubmit = async () => {
-  try {
-    await addUser(username, password);
-    console.log("User added successfully!");
-    // Handle successful registration (e.g., clear input fields, display a success message)
-  } catch (error) {
-    console.error("Error adding user:", error);
-    // Handle errors appropriately (e.g., display error messages)
-  }
-};
-
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // const [confirmPassword, setConfirmPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [passwordVisible, setPasswordVisible] = useState(false);
 
+  //Password Validation
+
+  /*// Check if passwords match
+  if (password !== confirmPassword) {
+    console.error("Passwords do not match");
+    // Handle the mismatch (e.g., display an error message to the user)
+    return;
+  }*/
+
+  //handle password visibility
+  const togglePasswordVisibility = () => {
+    setPasswordVisible((prevVisible) => !prevVisible);
+  };
+
+  //Form submission logic
+  const register = async (e) => {
+    e.preventDefault();
+
+    try {
+      // Create user with email and password
+      await createUserWithEmailAndPassword(auth, email, password);
+
+      // Handle successful registration
+      console.log("User added successfully!");
+      alert("User added successfully!");
+    } catch (error) {
+      // Handle errors
+      console.error("Error adding user:", error.message);
+    }
+  };
 
   return (
     <div className="creg-main-container">
       <img src="assets/Rectangle 104.png" alt="doc-smile" className="image-1" />
-      <div className="creg-container">
+      <form className="creg-container" onSubmit={register}>
         <h3>Welcome to TropicMed</h3>
         <h4>Enter your Credentials to Register an account</h4>
-        <FloatingLabelInput
-          label="Username"
-          type="email"
-          name="Email address"
-          onChange={(event) => setUsername(event.target.value)}
-        />
-        <FloatingLabelInput 
-          label="Password"
-          type="password"
-          name="Password"
-          onChange={(event) => setPassword(event.target.value)}
-        />
-        <FloatingLabelInput
-          label="Confirm Password"
-          type="password"
-          name="Confirm Password"
-        />
+
+        <div className="floating-input-container">
+          <input
+            id="email"
+            className={`floating-input ${email ? "focused" : ""}`}
+            placeholder="Email Address"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+
+        <div className="floating-input-container">
+          <input
+            id="password"
+            className={`floating-input password ${password ? "focused" : ""}`}
+            placeholder="Password"
+            type={passwordVisible ? "text" : "password"}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button
+            type="button"
+            className="password-visibility-toggle"
+            onClick={togglePasswordVisibility}
+          >
+            <FontAwesomeIcon icon={passwordVisible ? faEyeSlash : faEye} />
+          </button>
+        </div>
+
+        <div className="floating-input-container">
+          <input
+            id="confirmPassword"
+            className={`floating-input cpassword ${
+              confirmPassword ? "focused" : ""
+            }`}
+            placeholder="Confirm Password"
+            type={passwordVisible ? "text" : "password"}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+          />
+        </div>
         <div className="creg-button">
           {button && (
-            <Button buttonStyle="btn--primary" buttonSize="btn--medium" onClick={handleSubmit}>
+            <Button buttonStyle="btn--primary" buttonSize="btn--medium">
               Register
             </Button>
           )}
@@ -84,7 +123,7 @@ const CustomerReg = () => {
             </Button>
           )}
         </div>
-      </div>
+      </form>
     </div>
   );
 };
