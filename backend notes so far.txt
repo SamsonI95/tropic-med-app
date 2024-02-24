@@ -10,3 +10,9 @@ NOTES ON WHAT FILES I ALTERED SINCE THE LAST PUSH
     -(line 61)            Added an onClick property to the register button to submit the values to the database 
 
 
+Updated by Samson
+1 -- I removed the firebaseconfig.js file and made the firebase.js the main firebase file, when authentication and firebase app was exported from.
+
+2 -- For now only customer can register, some work needs to be done on the front-end for other user to register.
+
+3 -- You will delete my authentication data and input yours to have control over userdata
