@@ -32,6 +32,7 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  width: fit-content;
 }
 
 .navbar-logo-text > .tropic {
@@ -46,6 +47,7 @@
   cursor: pointer;
   position: relative;
   padding-left: 50px;
+  width: fit-content;
   /*display: none;  Hide by default on larger screens */
 }
 

@@ -8,8 +8,7 @@
 
 body {
   font-family: Poppins;
-  width: 100%;
-  overflow-x: hidden;
+  max-width: 1600px;
 }
 
 ::-webkit-scrollbar {

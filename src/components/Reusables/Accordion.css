@@ -1,6 +1,7 @@
 .accordion {
-  transform: translateX(27%);
+  /*transform: translateX(27%);*/
   margin-bottom: 2rem;
+  width: fit-content;
 }
 
 .accordion-toggle {

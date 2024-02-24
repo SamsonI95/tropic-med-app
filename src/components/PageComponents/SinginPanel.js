@@ -1,10 +1,13 @@
 //App
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { auth } from "../../config/firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 //Component
-import FloatingLabelInput from "../Reusables/FloatingLabelInput";
 import { Button } from "../Reusables/Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
 //Style
 
@@ -12,6 +15,30 @@ import "./SinginPanel.css";
 
 const SinginPanel = () => {
   const [button] = useState(true);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [passwordVisible, setPasswordVisible] = useState(false);
+
+  //handle password visibility
+  const togglePasswordVisibility = () => {
+    setPasswordVisible((prevVisible) => !prevVisible);
+  };
+
+  //SignIn logic
+  const signin = async (e) => {
+    e.preventDefault();
+
+    try {
+      // Create user with email and password
+      await signInWithEmailAndPassword(auth, email, password);
+
+      // Handle successful registration
+      console.log("User Signed In successfully!");
+    } catch (error) {
+      // Handle errors
+      console.error("Error adding user:", error.message);
+    }
+  };
 
   return (
     <div className="sgn-main-container">
@@ -19,15 +46,31 @@ const SinginPanel = () => {
       <div className="sgn-container">
         <h3>Welcome to TropicMed</h3>
         <h4>Enter your Credentials to Access an account</h4>
-        <FloatingLabelInput
-          label="Email address"
-          type="email"
-          name="Email address"
+        <input
+          className="input-field"
+          placeholder="Email address"
+          onChange={(e) => setEmail(e.target.value)}
         />
-        <FloatingLabelInput label="Password" type="password" name="Password" />
+        <input
+          className="input-field"
+          placeholder="Password"
+          type={passwordVisible ? "text" : "password"}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <button
+          type="button"
+          className="password-visibility-toggles"
+          onClick={togglePasswordVisibility}
+        >
+          <FontAwesomeIcon icon={passwordVisible ? faEyeSlash : faEye} />
+        </button>
         <div className="sgn-button">
           {button && (
-            <Button buttonStyle="btn--primary" buttonSize="btn--medium">
+            <Button
+              buttonStyle="btn--primary"
+              buttonSize="btn--medium"
+              onClick={signin}
+            >
               Sign In
             </Button>
           )}

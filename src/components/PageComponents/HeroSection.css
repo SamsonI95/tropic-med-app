@@ -7,6 +7,7 @@
   position: absolute;
   top: 80px;
   z-index: -1;
+  left: 0;
 }
 
 .welcome-container>.welcome-container-text {
@@ -31,14 +32,15 @@
 .sponsors-container {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 300px;
+  margin-top: 25rem;
+  margin-bottom: 10rem;
 }
 
 .carousel-container {
   padding: 10px;
   margin-top: 70px;
   margin-left: 5rem;
-  transform: translateX(20px);
+  transform: translateX(-20px);
 }
 
 .carousel-container>.carousel-content>Slider {
@@ -48,9 +50,9 @@
 }
 
 .testimony-card {
-  position: absolute;
+  position: relative;
   transform: translateY(8rem);
-  left: 4%;
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,6 +60,7 @@
   height: 400px;
   border: 1px solid #61ffb5;
   background: #e2fef9;
+  margin: 0 auto;
 }
 
 .testimony-card h3 {
@@ -80,9 +83,10 @@
 
 .capacity-card {
   display: flex;
-  transform: translateY(35rem);
-  margin-top: 5rem;
-  /*position: absolute;
+  transform: translateY(12rem);
+  margin: 0 auto;
+  /*margin-top: 5rem;
+  position: absolute;
     top: 180%;
     left: 8%;*/
 }
@@ -90,6 +94,8 @@
 .capacity-card-content {
   display: flex;
   width: 1113px;
+  margin: 20px auto;
+  justify-content: center;
 }
 
 .capacity-counter {
@@ -104,12 +110,6 @@
   /*position: relative;
     top: 20%;
     left: 20px;*/
-}
-
-.capacity-card-content {
-  position: relative;
-  left: 20%;
-  margin: 20px 0;
 }
 
 .capacity-icon {
@@ -168,9 +168,9 @@ p {
 
 .feature-story-container {
   position: relative;
-  transform: translateY(35rem);
+  transform: translateY(15rem);
   margin-top: 5rem;
-  margin-bottom: 45%;
+  /*margin-bottom: 45%;*/
 }
 
 .feature-story-header {
@@ -191,11 +191,13 @@ p {
 }
 
 .stories-contianer {
-  margin-top: 5rem;
+  margin: 5rem 0;
 }
 
 .stories-card-item {
   display: flex;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .stories-card {
@@ -205,7 +207,7 @@ p {
   height: 600px;
   border-radius: 10px;
   border: 1px solid #d8d8d8;
-  margin-left: 20px;
+  /*margin-left: 20px;*/
   /*float: left;
     transition: 0.6s ease-in-out;
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.26);*/
@@ -265,7 +267,7 @@ h5 {
 }
 
 .faq {
-  margin-top: 5rem;
+  margin-top: 20rem;
 }
 
 .faq-header h3 {
@@ -281,7 +283,7 @@ h5 {
   height: 10px;
   background-color: #ff6b00;
   position: relative;
-  left: 46.5%;
+  left: 46.9%;
   margin-bottom: 4rem;
 }
 
@@ -302,6 +304,13 @@ h5 {
 .feature-story-footer:hover {
   color: #ff6b00;
 }
+
+.accordion-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 @media only screen and (max-width: 720px) {
   .nav-logo-text {
