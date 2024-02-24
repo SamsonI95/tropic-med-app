@@ -10,7 +10,7 @@
   object-fit: cover;
   position: fixed;
   top: 0;
-  width: 1440px;
+  width: 100%;
 }
 
 .user-select-container {

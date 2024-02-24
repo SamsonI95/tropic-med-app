@@ -1,5 +1,6 @@
 //App
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { auth } from "../../config/firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
@@ -28,6 +29,12 @@ const CustomerReg = () => {
     // Handle the mismatch (e.g., display an error message to the user)
     return;
   }*/
+
+  const navigate = useNavigate();
+
+  const signin = () => {
+    navigate("/signin");
+  };
 
   //handle password visibility
   const togglePasswordVisibility = () => {
@@ -104,9 +111,8 @@ const CustomerReg = () => {
         </div>
         <div className="cuser-redirect">
           Already have an account?{" "}
-          <Link className="signin" to="/sign-in">
-            {" "}
-            Sign in
+          <Link className="signin" to="/signin">
+            <Button buttonStyle="btn--noutline1" buttonSize="btn--none" onClick={signin}> Sign in</Button>
           </Link>
         </div>
         <div className="social-reg">

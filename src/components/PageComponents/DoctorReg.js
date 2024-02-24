@@ -1,55 +1,152 @@
 //App
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 //Component
-import FloatingLabelInput from "../Reusables/FloatingLabelInput";
 import { Button } from "../Reusables/Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+
+//Firebase Server
+import { auth } from "../../config/firebase";
+import { db } from "../../config/firebase";
+import { collection, addDoc } from "firebase/firestore";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 
 //Style
 import "./DoctorReg.css";
 
 const DocReg = () => {
   const [button] = useState(true);
+  const navigate = useNavigate();
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [specialization, setSpecialization] = useState("");
+  const [licenseAuthority, setLicenseAuthority] = useState("");
+  const [licenseNumber, setLicenseNumber] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [passwordVisible, setPasswordVisible] = useState(false);
+
+  //handle password visibility
+  const togglePasswordVisibility = () => {
+    setPasswordVisible((prevVisible) => !prevVisible);
+  };
+
+  //user data function for databse
+  const dbref = collection(db, "userinfo");
+
+  //Form submission logic
+  const register = async (e) => {
+    e.preventDefault();
+
+    // Check if password and confirm password match
+    if (password !== confirmPassword) {
+      alert("Passwords do not match");
+      return;
+    }
+
+    try {
+      // Create user with email and password
+      await createUserWithEmailAndPassword(auth, email, password);
+
+      // Add user information to Firestore
+      await addDoc(dbref, {
+        firstName: firstName,
+        lastName: lastName,
+        specialization: specialization,
+        licenseAuthority: licenseAuthority,
+        licenseNumber: licenseNumber,
+        phoneNumber: phoneNumber,
+        email: email,
+        phoneNumber: phoneNumber,
+      });
+
+      // Handle successful registration
+      console.log("User added successfully!");
+      alert("User added successfully!");
+      navigate("/home");
+    } catch (error) {
+      // Handle errors
+      console.error("Error adding user:", error.message);
+      alert(`Error adding user: ${error.message}`);
+    }
+  };
 
   return (
     <div className="docreg-main-container">
       <img src="assets/Rectangle 105.png" alt="doc-smile" className="image-1" />
-      <div className="docreg-container">
+      <form onSubmit={register} className="docreg-container">
         <h3>Welcome to TropicMed</h3>
         <h4>Enter your Credentials to Register an account</h4>
-        <FloatingLabelInput label="First Name" type="name" name="Username" />
-        <FloatingLabelInput label="Last Name" type="name" name="Username" />
-        <FloatingLabelInput
-          label="Specialization"
+
+        <input
+          className="dr-input-field"
+          id="firstName"
           type="text"
-          name="Specialization"
+          placeholder="First Name"
+          onChange={(e) => setFirstName(e.target.value)}
         />
-        <FloatingLabelInput
-          label="Licence Authority"
+        <input
+          className="dr-input-field"
           type="text"
-          name="Licence Authority"
+          placeholder="Last Name"
+          onChange={(e) => setLastName(e.target.value)}
         />
-        <FloatingLabelInput
-          label="Licence Number"
+        <input
+          className="dr-input-field"
           type="text"
-          name="Licence Number"
+          placeholder="Specialization"
+          onChange={(e) => setSpecialization(e.target.value)}
         />
-        <FloatingLabelInput
-          label="Phone Number"
+        <input
+          className="dr-input-field"
+          type="text"
+          placeholder="Licence Authority"
+          onChange={(e) => setLicenseAuthority(e.target.value)}
+        />
+        <input
+          className="dr-input-field"
+          type="text"
+          placeholder="Licence Number"
+          onChange={(e) => setLicenseNumber(e.target.value)}
+        />
+        <input
+          className="dr-input-field"
           type="phone"
-          name="Phone Number"
+          placeholder="Phone Number"
+          onChange={(e) => setPhoneNumber(e.target.value)}
         />
-        <FloatingLabelInput
-          label="Email address"
+        <input
+          className="dr-input-field"
           type="email"
-          name="Email address"
+          placeholder="Email"
+          onChange={(e) => setEmail(e.target.value)}
         />
-        <FloatingLabelInput label="Password" type="password" name="Password" />
-        <FloatingLabelInput
-          label="Confirm Password"
-          type="password"
-          name="Confirm Password"
+        <div>
+          <input
+            className="dr-input-field"
+            id="dr-password"
+            type={passwordVisible ? "text" : "password"}
+            placeholder="Password"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button
+            type="button"
+            className="password-visibility-toggle"
+            onClick={togglePasswordVisibility}
+          >
+            <FontAwesomeIcon icon={passwordVisible ? faEyeSlash : faEye} />
+          </button>
+        </div>
+        <input
+          className="dr-input-field"
+          type={passwordVisible ? "text" : "password"}
+          placeholder="Confirm Password"
+          onChange={(e) => setConfirmPassword(e.target.value)}
         />
         <div className="validate">
           <input type="checkbox" />
@@ -62,7 +159,11 @@ const DocReg = () => {
         </div>
         <div className="docreg-button">
           {button && (
-            <Button buttonStyle="btn--primary" buttonSize="btn--medium">
+            <Button
+              buttonStyle="btn--primary"
+              buttonSize="btn--medium"
+              onClick={register}
+            >
               Register
             </Button>
           )}
@@ -88,7 +189,7 @@ const DocReg = () => {
             </Button>
           )}
         </div>
-      </div>
+      </form>
     </div>
   );
 };

@@ -1,5 +1,6 @@
 //App
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { auth } from "../../config/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
@@ -18,6 +19,12 @@ const SinginPanel = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordVisible, setPasswordVisible] = useState(false);
+
+  const navigate = useNavigate();
+
+  const signup = () => {
+    navigate("/signin");
+  };
 
   //handle password visibility
   const togglePasswordVisibility = () => {
@@ -87,8 +94,14 @@ const SinginPanel = () => {
         <div className="cuser-redirect">
           Don't have an account?{" "}
           <Link className="signup" to="/reg-select">
-            {" "}
-            Sign Up
+            <Button
+              buttonStyle="btn--noutline1"
+              buttonSize="btn--none"
+              onClick={signup}
+            >
+              {" "}
+              Sign Up
+            </Button>
           </Link>
         </div>
         <div className="social-reg">

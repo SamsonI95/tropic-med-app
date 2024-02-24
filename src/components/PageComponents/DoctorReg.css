@@ -11,7 +11,7 @@
   position: fixed;
   top: 0;
   bottom: 0;
-  width: 1440px;
+  width:100%;
 }
 
 .docreg-container {
@@ -49,6 +49,22 @@
   font-weight: 400;
   line-height: normal;
   text-align: center;
+}
+
+.dr-input-field {
+  width: 404px;
+  height: 48px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 16px;
+  border: 1px solid #777;
+  outline: none;
+  text-indent: 15px;
+  transition: border-color 0.2s; 
+}
+
+#dr-password {
+  transform: translateX(5px);
 }
 
 .validate {

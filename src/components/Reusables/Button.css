@@ -30,6 +30,13 @@
   margin-right: 50px;
 }
 
+.btn--noutline1 {
+  color: var(--text1);
+  border: none;
+  background: none;
+  margin-right: 50px;
+}
+
 .btn--outline {
   border: 1px solid #242424;
   background: none;
@@ -40,6 +47,10 @@
 .btn--secondary {
   background-color: var(--secondary);
   color: var(--text1);
+}
+
+.btn--none {
+  color: #0f3dde;
 }
 
 .btn--small {
