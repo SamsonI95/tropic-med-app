@@ -62,7 +62,6 @@ const DocReg = () => {
         licenseNumber: licenseNumber,
         phoneNumber: phoneNumber,
         email: email,
-        phoneNumber: phoneNumber,
       });
 
       // Handle successful registration
