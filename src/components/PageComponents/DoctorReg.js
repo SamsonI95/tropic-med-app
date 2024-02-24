@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { Button } from "../Reusables/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 //Firebase Server
 import { auth } from "../../config/firebase";
@@ -75,64 +76,93 @@ const DocReg = () => {
     }
   };
 
+  //Close form filled
+  const handleCloseForm = () => {
+    navigate("/reg-select");
+  };
+
   return (
     <div className="docreg-main-container">
       <img src="assets/Rectangle 105.png" alt="doc-smile" className="image-1" />
       <form onSubmit={register} className="docreg-container">
+        <div className="form-close">
+          <FontAwesomeIcon icon={faTimes} onClick={handleCloseForm} />
+        </div>
         <h3>Welcome to TropicMed</h3>
         <h4>Enter your Credentials to Register an account</h4>
-
-        <input
-          className="dr-input-field"
-          id="firstName"
-          type="text"
-          placeholder="First Name"
-          onChange={(e) => setFirstName(e.target.value)}
-        />
-        <input
-          className="dr-input-field"
-          type="text"
-          placeholder="Last Name"
-          onChange={(e) => setLastName(e.target.value)}
-        />
-        <input
-          className="dr-input-field"
-          type="text"
-          placeholder="Specialization"
-          onChange={(e) => setSpecialization(e.target.value)}
-        />
-        <input
-          className="dr-input-field"
-          type="text"
-          placeholder="Licence Authority"
-          onChange={(e) => setLicenseAuthority(e.target.value)}
-        />
-        <input
-          className="dr-input-field"
-          type="text"
-          placeholder="Licence Number"
-          onChange={(e) => setLicenseNumber(e.target.value)}
-        />
-        <input
-          className="dr-input-field"
-          type="phone"
-          placeholder="Phone Number"
-          onChange={(e) => setPhoneNumber(e.target.value)}
-        />
-        <input
-          className="dr-input-field"
-          type="email"
-          placeholder="Email"
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <div>
+        <div className="floating-input-container">
           <input
-            className="dr-input-field"
+            className="floating-input"
+            id="firstName"
+            type="text"
+            placeholder="First Name"
+            onChange={(e) => setFirstName(e.target.value)}
+          />
+          <label className="form-label">First Name</label>
+        </div>
+        <div className="floating-input-container">
+          <input
+            className="floating-input"
+            type="text"
+            placeholder="Last Name"
+            onChange={(e) => setLastName(e.target.value)}
+          />
+          <label className="form-label">Last Name</label>
+        </div>
+        <div className="floating-input-container">
+          <input
+            className="floating-input"
+            type="text"
+            placeholder="Specialization"
+            onChange={(e) => setSpecialization(e.target.value)}
+          />
+          <label className="form-label">Specialization</label>
+        </div>
+        <div className="floating-input-container">
+          <input
+            className="floating-input"
+            type="text"
+            placeholder="Licence Authority"
+            onChange={(e) => setLicenseAuthority(e.target.value)}
+          />
+          <label className="form-label">Licence Authority</label>
+        </div>
+        <div className="floating-input-container">
+          <input
+            className="floating-input"
+            type="text"
+            placeholder="Licence Number"
+            onChange={(e) => setLicenseNumber(e.target.value)}
+          />
+          <label className="form-label">Licence Number</label>
+        </div>
+        <div className="floating-input-container">
+          <input
+            className="floating-input"
+            type="phone"
+            placeholder="Phone Number"
+            onChange={(e) => setPhoneNumber(e.target.value)}
+          />
+          <label className="form-label">Phone Number</label>
+        </div>
+        <div className="floating-input-container">
+          <input
+            className="floating-input"
+            type="email"
+            placeholder="Email"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <label className="form-label">Email</label>
+        </div>
+        <div className="floating-input-container">
+          <input
+            className="floating-input"
             id="dr-password"
             type={passwordVisible ? "text" : "password"}
             placeholder="Password"
             onChange={(e) => setPassword(e.target.value)}
           />
+          <label className="form-label">Password</label>
           <button
             type="button"
             className="password-visibility-toggle"
@@ -141,12 +171,16 @@ const DocReg = () => {
             <FontAwesomeIcon icon={passwordVisible ? faEyeSlash : faEye} />
           </button>
         </div>
-        <input
-          className="dr-input-field"
-          type={passwordVisible ? "text" : "password"}
-          placeholder="Confirm Password"
-          onChange={(e) => setConfirmPassword(e.target.value)}
-        />
+        <div className="floating-input-container">
+          <input
+            className="floating-input"
+            type={passwordVisible ? "text" : "password"}
+            placeholder="Confirm Password"
+            onChange={(e) => setConfirmPassword(e.target.value)}
+          />
+          <label className="form-label">Confirm Password</label>
+        </div>
+
         <div className="validate">
           <input type="checkbox" />
           <p>

@@ -1,8 +1,8 @@
 .creg-main-container {
   width: 100%;
-  height: 120vh;
   display: flex;
-  overflow: visible;
+  align-items: center;
+  justify-items: center;
 }
 
 .image-1 {
@@ -17,7 +17,6 @@
 
 .creg-container {
   width: 593px;
-  height: 650px;
   display: flex;
   padding: 32px 16px;
   flex-direction: column;
@@ -47,7 +46,17 @@
   text-align: center;
 }
 
-.form-control {
+.form-close {
+  transform: translateX(15rem);
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.form-close:hover {
+  color: #ff6b00;
+}
+
+/*.form-control {
   width: 404px;
   height: 48px;
   justify-content: center;
@@ -61,53 +70,67 @@
 
 .form-control:focus {
   outline: none;
-}
+}*/
 
 .floating-input-container {
   position: relative;
-  margin-bottom: 20px;
+  margin: 12px 0;
 }
 
-.floating-input {
+.floating-input-container .floating-input {
   width: 404px;
   height: 48px;
   padding: 10px;
-  font-size: 16px;
+  font-size: 18px;
   border-radius: 16px;
+  background-color: transparent;
   border: 1px solid #777;
-  outline: none;
   text-indent: 15px;
-  transition: border-color 0.2s; 
+  transition: 0.2s all ease;
 }
 
-.floating-input:focus,
-.floating-input:not(:placeholder-shown) {
-  border-color: #777;
+.floating-input-container .floating-input:focus {
+  border-color: transparent;
 }
 
-.floating-input:not(:placeholder-shown) + label {
-  font-size: 12px;
+.floating-input-container .floating-input::placeholder {
+  color: transparent;
+}
+
+.floating-input-container .form-label {
+  position: absolute;
+  top: 1rem;
+  left: 15px;
+  font-size: 18px;
+  padding: 0 10px;
   color: #777;
-  top: -12px;
-  left: 0;
+  pointer-events: none;
+  transition: all 0.2s ease;
 }
 
-.password {
-  margin-top: 20px;
+.floating-input-container .floating-input:focus + .form-label,
+.floating-input-container
+  .floating-input:not(:placeholder-shown)
+  + .form-label {
+  top: -10px;
+  left: 20px;
+  padding: 0 5px;
+  font-size: 16px;
+  color: #777;
+  background-color: white;
+  border-radius: 5px;
 }
 
-.cpassword {
-  margin-top: -25px;
+.floating-input-container.invalid {
+  border-color: red; /* Set the border color to red for invalid inputs */
 }
 
-.password-input-container.error {
-  border: 2px solid red;
+.floating-input-container.invalid .floating-input {
+  color: red; /* Set text color to red for invalid inputs */
 }
 
-.error-message {
-  color: red;
-  font-size: 14px;
-  margin-top: 5px;
+.floating-input-container.invalid .form-label {
+  color: red; /* Optionally, change label color for invalid inputs */
 }
 
 .creg-button {
@@ -137,15 +160,4 @@
 
 .social-reg img {
   transform: translateY(5px);
-}
-
-#email {
-  position: relative;
-  left: 2px;
-}
-
-#password {
-  margin-top: -20px;
-  position: relative;
-  left: 8px;
 }
