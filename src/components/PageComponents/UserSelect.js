@@ -11,7 +11,6 @@ import { faTimes } from "@fortawesome/free-solid-svg-icons";
 //Style
 import "./UserSelect.css";
 
-
 const UserSelect = () => {
   const [button] = useState(true);
 
@@ -36,16 +35,16 @@ const UserSelect = () => {
     }
   };
 
-//Close form filled
-const handleCloseForm = () => {
-  navigate("/home");
-};
+  //Close form filled
+  const handleCloseForm = () => {
+    navigate("/home");
+  };
 
   return (
     <div className="reg-container">
       <img src="assets/Rectangle 104.png" alt="doc-smile" className="image-1" />
       <div className="user-select-container">
-      <div className="uform-close">
+        <div className="uform-close">
           <FontAwesomeIcon icon={faTimes} onClick={handleCloseForm} />
         </div>
         <h3>Welcome to TropicMed</h3>

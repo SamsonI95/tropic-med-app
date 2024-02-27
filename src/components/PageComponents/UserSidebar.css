@@ -1,0 +1,64 @@
+.sidebar-container {
+    margin: 0;
+}
+
+.sidebar-wrapper {
+  /*padding: 3rem;*/
+  background-color: #cbcfdc;
+  width: 250px;
+  height: 100vh;
+}
+
+.sidebar-usercontent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-userimage {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-color: red;
+  margin-top: 2rem;
+}
+
+.sidebar-userinfo {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.sidebar-userinfo > h3 {
+  margin-bottom: 1rem;
+}
+
+.sidebar-menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar-menu a {
+  text-decoration: none; /* Remove the underline */
+  color: black; /* Set the text color to black */
+}
+
+.sidebar-menu ul {
+  list-style: none;
+  width: 100%;
+  margin: 0 auto;
+  /*text-align: center;
+  transform: translateY(3rem);*/
+}
+
+.sidebar-menu ul li {
+  margin-bottom: 2rem;
+}
+
+.sidebar-menu ul li:hover {
+  background-color: #dce0ee;
+  cursor: pointer;
+  padding: 10px 0;
+  width: 100%;
+}

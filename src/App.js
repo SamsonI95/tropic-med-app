@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/Reusables/NavBar";
 import Footer from "./components/Reusables/Footer";
 import HideFooter from "./components/Reusables/HideFooter";
+import HideNavBar from "./components/Reusables/HideNavBar";
 
 //Pages
 import Home from "./components/pages/Home";
@@ -14,7 +15,10 @@ import RegSelect from "./components/pages/RegSelect";
 import CustomerReg from "./components/PageComponents/CustomerReg";
 import DoctorReg from "./components/PageComponents/DoctorReg";
 import OrgReg from "./components/PageComponents/OrgReg";
-import Profile from "./components/pages/Profile";
+import UserPage from "./components/pages/UserPage";
+
+//UserPanelComponent
+import Profile from "./components/UserPanel/Profile";
 
 //Icon components
 import { setupIonicReact } from "@ionic/react";
@@ -28,7 +32,9 @@ function App() {
   return (
     <>
       <Router>
-        <NavBar />
+        <HideNavBar>
+          <NavBar />
+        </HideNavBar>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
@@ -37,7 +43,9 @@ function App() {
           <Route path="/customer-reg" element={<CustomerReg />} />
           <Route path="/doc-reg" element={<DoctorReg />} />
           <Route path="/org-reg" element={<OrgReg />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/user" element={<UserPage />}>
+            <Route path="/user/profile" element={<Profile />} />
+          </Route>
         </Routes>
         <HideFooter>
           <Footer />
