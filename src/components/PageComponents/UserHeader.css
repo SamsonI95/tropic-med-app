@@ -1,9 +1,9 @@
 .header-container {
-  margin: 0 auto;
+  margin: -2rem auto;
 }
 
 .header-wrapper {
-  transform: translateX(2rem);
+  transform: translateX(5rem);
 }
 
 /*.header-wrapper::before {
@@ -24,5 +24,17 @@
 .header-buttons {
   width: 94px;
   height: 130px;
+  border: none;
   border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-buttons a {
+  text-decoration: none;
+}
+
+.header-buttons:hover {
+  background-color: #cbcfdc;
+  cursor: pointer;
 }

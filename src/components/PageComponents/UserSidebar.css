@@ -6,7 +6,7 @@
   /*padding: 3rem;*/
   background-color: #cbcfdc;
   width: 250px;
-  height: 100vh;
+  height: 100%;
 }
 
 .sidebar-usercontent {
@@ -47,7 +47,7 @@
 .sidebar-menu ul {
   list-style: none;
   width: 100%;
-  margin: 0 auto;
+  text-indent: 3rem;
   /*text-align: center;
   transform: translateY(3rem);*/
 }

@@ -1,16 +1,52 @@
+//App
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+
+//Component
 import { Button } from "./Button";
-import { SidebarData } from "../Data types/SidebarData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
+
+//Data
+import { SidebarData } from "../Data types/SidebarData";
+
+//Server
+import { auth } from "../../config/firebase";
+import { signOut, onAuthStateChanged } from "firebase/auth";
+
+//Style
 import "./NavBar.css";
+
 function NavBar() {
   const [button] = useState(true);
 
   //hamburger icon
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
+
+  //User Authentication Handling
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      setUser(user);
+    });
+
+    // Cleanup the observer when the component is unmounted
+    return () => unsubscribe();
+  }, []);
+
+  //Sign Out handling
+  const userSignOut = async () => {
+    try {
+      await signOut(auth);
+      {/*setMobileMenuOpen(!isMobileMenuOpen);*/}
+      // You may want to navigate or perform additional actions after sign-out
+    } catch (error) {
+      console.error("Error signing out", error);
+    }
+  };
 
   return (
     <>
@@ -55,7 +91,7 @@ function NavBar() {
           </li>
           {SidebarData.map((item, index) => {
             return (
-              <li key={index} className={item.cName}>
+              <li key={index} className={item.cName} onClick={showSidebar}>
                 <Link to={item.path}>
                   {item.icon}
                   <span>{item.title}</span>

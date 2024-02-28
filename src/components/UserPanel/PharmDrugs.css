@@ -1,0 +1,150 @@
+.pharmdrug-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: max-content;
+  position: absolute;
+  top: 35%;
+  left: 35.5%;
+}
+
+.search-bar {
+  position: relative;
+  left: -3.2rem;
+}
+
+.search-field-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.pd-search-bar {
+  width: 538px;
+  height: 48px;
+  border: none;
+  border-radius: 15px;
+  background-color: #e5e7ed;
+  text-indent: 1rem;
+}
+
+.pd-search-icon {
+  position: relative;
+  right: 3rem; /* Adjust as needed to position the icon */
+  cursor: pointer;
+  color: gray;
+}
+
+.pd-filter-button {
+  width: 80px;
+  height: 48px;
+  border: 0.5px solid #777777;
+  border-radius: 15px;
+  background-color: #fff;
+  color: gray;
+  transform: translateX(3.1rem);
+  cursor: pointer;
+}
+
+.filter-popup {
+  border: 1px solid #777777;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 20px;
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  transform: translateY(2rem);
+}
+
+.filter-popup > ul {
+  list-style-type: none;
+}
+
+.filter-popup > ul > li {
+  margin-bottom: 10px;
+}
+
+/*.filter-popup > ul > li:hover {
+  background-color: #dce0ee;
+  cursor: pointer;
+  width: 100%;
+}*/
+
+.pharm-drugs-list-container > ul {
+  list-style-type: none;
+}
+
+.pharm-drug-button {
+  width: 842px;
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 1px 1px 4px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.pharm-drug-image {
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+}
+
+.i1 {
+  background-color: crimson;
+}
+
+.i2 {
+  background-color: darkorange;
+}
+
+.i3 {
+  background-color: gold;
+}
+
+.i4 {
+  background-color: green;
+}
+
+.i5 {
+  background-color: blue;
+}
+
+.pharm-drug-text {
+  position: absolute;
+  text-align: justify;
+  left: 25%;
+}
+
+.pharm-drug-text > h3 {
+  color: #777777;
+}
+
+.pharm-drug-order-text > h3 {
+  color: #1bc576;
+}
+
+@media (max-width: 1400px) {
+  .pharmdrug-wrapper {
+    top: 43%;
+    left: 30%;
+    height: fit-content;
+  }
+
+  .pharm-drugs-list-container {
+    transform: translateY(2rem);
+  }
+
+  .search-field-container {
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  .pharm-drug-button {
+    margin-bottom: 1rem;
+  }
+}

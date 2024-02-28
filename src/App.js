@@ -19,6 +19,8 @@ import UserPage from "./components/pages/UserPage";
 
 //UserPanelComponent
 import Profile from "./components/UserPanel/Profile";
+import PharmDrug from "./components/UserPanel/PharmDrug";
+
 
 //Icon components
 import { setupIonicReact } from "@ionic/react";
@@ -45,6 +47,7 @@ function App() {
           <Route path="/org-reg" element={<OrgReg />} />
           <Route path="/user" element={<UserPage />}>
             <Route path="/user/profile" element={<Profile />} />
+            <Route path="/user/pharm-drug" element={<PharmDrug />} />
           </Route>
         </Routes>
         <HideFooter>

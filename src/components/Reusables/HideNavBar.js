@@ -6,10 +6,10 @@ const HideNavBar = ({children}) => {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.pathname === "/home" || location.pathname === "/" || location.pathname === "/user") {
-      setShowNavbar(true);
-    } else {
+    if (!setShowNavbar) {
       setShowNavbar(false);
+    } else {
+      setShowNavbar(true);
     }
   }, [location]);
 

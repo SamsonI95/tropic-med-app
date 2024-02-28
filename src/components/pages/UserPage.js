@@ -13,6 +13,7 @@ const UserPage = () => {
         {`
         section {
           display: flex;
+          height: 90vh;
         }
         UserSidebar {
           position: absolute;
@@ -20,6 +21,12 @@ const UserPage = () => {
         }
         UserContent {
           postion: absolute;
+        }
+
+        @media (max-width: 1400px) {
+          section {
+          height: 810px;
+          }
         }
         `}
       </style>
