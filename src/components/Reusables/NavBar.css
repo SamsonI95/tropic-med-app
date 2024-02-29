@@ -163,6 +163,18 @@
   left: 35px;
 }
 
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.user > p {
+  position: relative;
+  top: 5px;
+  right: 2rem;
+  font-weight: bold;
+}
+
 @media only screen and (max-width: 720px) {
   .hamburger-icon {
     display: block;

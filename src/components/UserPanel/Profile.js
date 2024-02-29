@@ -6,9 +6,14 @@ import { useState } from "react";
 import { Button } from "../Reusables/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPenToSquare } from "@fortawesome/free-regular-svg-icons";
+import { faUser } from "@fortawesome/free-regular-svg-icons";
 
 //Style
 import "./Profile.css";
+
+//Server
+import { auth, db } from "../../config/firebase";
+import { storage } from "../../config/firebase";
 
 const Profile = () => {
   const [button] = useState(true);
@@ -21,16 +26,31 @@ const Profile = () => {
   const [genotype, setGenotype] = useState("");
   const [address, setAddress] = useState("");
 
+  //Edit profile form data control
+  const [isEditing, setIsEditing] = useState(false);
+
   return (
     <>
       <form>
         <div className="form-header-container">
-          <div className="header-image"></div>
+          <div className="header-image">
+            <img src="#" alt="user" />
+            <FontAwesomeIcon icon={faUser} />
+            <input
+              type="file"
+              id="profileImage"
+              accept="image/*"
+              style={{ display: "none" }}
+            />
+          </div>
           <div className="header-user-info">
             <h3>User Name</h3>
             <p>User Email</p>
           </div>
-          <div className="edit-buttton">
+          <div
+            className="edit-buttton"
+            onClick={() => setIsEditing(!isEditing)}
+          >
             <FontAwesomeIcon icon={faPenToSquare} />
           </div>
         </div>
@@ -113,7 +133,13 @@ const Profile = () => {
           </div>
           <div className="button-container">
             {button && (
-              <Button buttonSize="btn--large" buttonStyle="btn--secondary2">
+              <Button
+                buttonSize="btn--large"
+                buttonStyle="btn--secondary2"
+                onClick={() => {
+                   // Exit editing mode after saving changes
+                }}
+              >
                 Save Changes
               </Button>
             )}

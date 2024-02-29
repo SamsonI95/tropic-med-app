@@ -38,7 +38,7 @@ const SinginPanel = () => {
     try {
       // Create user with email and password
       await signInWithEmailAndPassword(auth, email, password);
-
+      navigate("/home");
       // Handle successful registration
       console.log("User Signed In successfully!");
     } catch (error) {

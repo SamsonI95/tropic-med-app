@@ -41,7 +41,9 @@ function NavBar() {
   const userSignOut = async () => {
     try {
       await signOut(auth);
-      {/*setMobileMenuOpen(!isMobileMenuOpen);*/}
+      {
+        /*setMobileMenuOpen(!isMobileMenuOpen);*/
+      }
       // You may want to navigate or perform additional actions after sign-out
     } catch (error) {
       console.error("Error signing out", error);
@@ -102,19 +104,32 @@ function NavBar() {
         </ul>
       </nav>
       <div className="navbar-rightSide">
-        {button && (
-          <Link to="/reg-select">
-            <Button buttonStyle="btn--noutline" buttonSize="btn--sl">
-              Register
+        {user ? (
+          <div className="user">
+            <p>Welcome, {user.displayName || user.email}!</p>
+            <Button
+              onClick={userSignOut}
+              buttonStyle="btn--primary"
+              buttonSize="btn--sl"
+            >
+              Sign Out
             </Button>
-          </Link>
-        )}
-        {button && (
-          <Link to="/signin">
-            <Button buttonStyle="btn--primary" buttonSize="btn--small">
-              Sign In
-            </Button>
-          </Link>
+          </div>
+        ) : (
+          button && (
+            <>
+              <Link to="/reg-select">
+                <Button buttonStyle="btn--noutline" buttonSize="btn--sl">
+                  Register
+                </Button>
+              </Link>
+              <Link to="/signin">
+                <Button buttonStyle="btn--primary" buttonSize="btn--small">
+                  Sign In
+                </Button>
+              </Link>
+            </>
+          )
         )}
       </div>
     </>

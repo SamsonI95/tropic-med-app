@@ -30,6 +30,11 @@
   box-shadow: 1px 1px 4px 4px rgba(0, 0, 0, 0.1);
 }
 
+.header-buttons > h3 {
+  text-align: center;
+  margin-top: 20px;
+}
+
 .header-buttons a {
   text-decoration: none;
 }
