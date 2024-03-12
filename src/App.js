@@ -19,7 +19,11 @@ import UserPage from "./components/pages/UserPage";
 
 //UserPanelComponent
 import Profile from "./components/UserPanel/Profile";
+import HealthRecord from "./components/UserPanel/HealthRecord";
 import PharmDrug from "./components/UserPanel/PharmDrug";
+import DocChat from "./components/UserPanel/DocChat";
+import TestLabs from "./components/UserPanel/TestLabs";
+import DentalCheck from "./components/UserPanel/DentalCheck";
 
 
 //Icon components
@@ -47,7 +51,11 @@ function App() {
           <Route path="/org-reg" element={<OrgReg />} />
           <Route path="/user" element={<UserPage />}>
             <Route path="/user/profile" element={<Profile />} />
+            <Route path="/user/health-record" element={<HealthRecord />} />
             <Route path="/user/pharm-drug" element={<PharmDrug />} />
+            <Route path="/user/doc-chat" element={<DocChat />} />
+            <Route path="/user/test-labs" element={<TestLabs />} />
+            <Route path="/user/dental-check" element={<DentalCheck />} />
           </Route>
         </Routes>
         <HideFooter>

@@ -13,13 +13,13 @@ const UserHeader = () => {
           <Link to="/user/pharm-drug">
             <button className="header-buttons">
               <img
-                src="/assets/medicine_pills_drugs_icon_149284 1small.jpg"
+                src="\assets\medicine_pills_drugs_icon_149284 1.png"
                 alt="drugs"
               />
               <h3>Pharmacy /Drugs</h3>
             </button>
           </Link>
-          <Link to="">
+          <Link to="/user/doc-chat">
             <button className="header-buttons">
               <img
                 src="/svg/call_doctor_coronavirus_smartphone_icon_142163 50.svg"
@@ -28,7 +28,7 @@ const UserHeader = () => {
               <h3>Doctors Chat</h3>
             </button>
           </Link>
-          <Link to="">
+          <Link to="/user/test-labs">
             <button className="header-buttons">
               <img
                 src="/svg/iconfinder-508-chemistry-lab-chemistry-lab-education-4212906_114963 1 50.svg"
@@ -37,7 +37,7 @@ const UserHeader = () => {
               <h3>Test<br/>Labs</h3>
             </button>
           </Link>
-          <Link to="">
+          <Link to="/user/dental-check">
             <button className="header-buttons">
               <img src="/assets/dental-checkup_3851949 2.png" alt="dental" />
               <h3>Dental Check</h3>

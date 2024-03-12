@@ -200,7 +200,7 @@
   .navbar-logo-text {
     display: block;
     position: relative;
-    left: 45%;
+    /*left: 45%;*/
   }
 
   .navbar-rightSide {

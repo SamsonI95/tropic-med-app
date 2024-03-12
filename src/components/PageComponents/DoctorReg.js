@@ -1,6 +1,7 @@
 //App
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 //Component
@@ -13,7 +14,7 @@ import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { auth } from "../../config/firebase";
 import { db } from "../../config/firebase";
 import { collection, addDoc } from "firebase/firestore";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 
 //Style
 import "./DoctorReg.css";
@@ -52,7 +53,16 @@ const DocReg = () => {
 
     try {
       // Create user with email and password
-      await createUserWithEmailAndPassword(auth, email, password);
+      const credentials = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+
+      // After successfully creating the user, set the displayName
+      await updateProfile(credentials.user, {
+        displayName: firstName, // Set the displayName to the entered username
+      });
 
       // Add user information to Firestore
       await addDoc(dbref, {

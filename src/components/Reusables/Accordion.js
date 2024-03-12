@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 
 //Style
-import "./Accordion.css"; // You can create a CSS file for styling
+import "./Accordion.css"; 
 
 //Icons
 import { IonIcon } from "@ionic/react";

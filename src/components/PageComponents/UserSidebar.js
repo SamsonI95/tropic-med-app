@@ -23,7 +23,7 @@ const UserSidebar = () => {
                 <Link to="/user/profile">
                   <li>Profile</li>
                 </Link>
-                <Link to="/user/health-records">
+                <Link to="/user/health-record">
                   <li>Health Records</li>
                 </Link>
                 <Link to="/user/pres-mgr">

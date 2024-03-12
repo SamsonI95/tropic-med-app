@@ -47,7 +47,7 @@
 }
 
 .filter-popup {
-  border: 1px solid #777777;
+  box-shadow: 1px 1px 4px 4px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   background-color: #fff;
   padding: 20px;
@@ -55,6 +55,7 @@
   position: absolute;
   right: 0;
   transform: translateY(2rem);
+  height: 240px;
 }
 
 .filter-popup > ul {
@@ -62,7 +63,7 @@
 }
 
 .filter-popup > ul > li {
-  margin-bottom: 10px;
+  margin-bottom: 2.5rem;
 }
 
 /*.filter-popup > ul > li:hover {
@@ -124,8 +125,19 @@
   color: #777777;
 }
 
+.pharm-drug-order-text {
+  display: inline-flex;
+  flex-direction: column;
+  text-align: right;
+  justify-content: right;
+}
+
 .pharm-drug-order-text > h3 {
   color: #1bc576;
+}
+
+.pharm-drug-order-text > h4 {
+  color: #cbcfdc;
 }
 
 @media (max-width: 1400px) {
