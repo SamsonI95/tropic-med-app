@@ -106,7 +106,7 @@ function NavBar() {
       <div className="navbar-rightSide">
         {user ? (
           <div className="user">
-            <p>Welcome, {user.displayName || user.email}!</p>
+            <p>Welcome, {user.userName || user.email}!</p>
             <Button
               onClick={userSignOut}
               buttonStyle="btn--primary"

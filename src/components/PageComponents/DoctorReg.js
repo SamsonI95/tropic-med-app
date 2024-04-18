@@ -1,7 +1,6 @@
 //App
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 //Component
@@ -45,25 +44,6 @@ const DocReg = () => {
   const register = async (e) => {
     e.preventDefault();
 
-    // Check if password and confirm password match
-    if (password !== confirmPassword) {
-      alert("Passwords do not match");
-      return;
-    }
-
-    try {
-      // Create user with email and password
-      const credentials = await createUserWithEmailAndPassword(
-        auth,
-        email,
-        password
-      );
-
-      // After successfully creating the user, set the displayName
-      await updateProfile(credentials.user, {
-        displayName: firstName, // Set the displayName to the entered username
-      });
-
       // Add user information to Firestore
       await addDoc(dbref, {
         firstName: firstName,
@@ -75,6 +55,20 @@ const DocReg = () => {
         email: email,
       });
 
+    try {
+      // Create user with email and password
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      const user = userCredential.user;
+
+      // After successfully creating the user, set the displayName
+      await updateProfile(user, {
+        displayName: firstName, // Set the displayName to the entered username
+      });
+
       // Handle successful registration
       console.log("User added successfully!");
       alert("User added successfully!");
@@ -83,6 +77,12 @@ const DocReg = () => {
       // Handle errors
       console.error("Error adding user:", error.message);
       alert(`Error adding user: ${error.message}`);
+    }
+
+    // Check if password and confirm password match
+    if (password !== confirmPassword) {
+      alert("Passwords do not match");
+      return;
     }
   };
 

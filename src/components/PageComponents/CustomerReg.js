@@ -17,15 +17,21 @@ import "./CustomerrReg.css";
 
 const CustomerReg = () => {
   const [button] = useState(true);
+  const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [passwordVisible, setPasswordVisible] = useState(false);
 
   //Form Validation
+  const [userNameValid, setUserNameValid] = useState(true);
   const [emailValid, setEmailValid] = useState(true);
   const [passwordValid, setPasswordValid] = useState(true);
   const [confirmPasswordValid, setConfirmPasswordValid] = useState(true);
+
+  const validateUserName = () => {
+    setUserNameValid(userName !== "");
+  };
 
   const validateEmail = () => {
     setEmailValid(email !== "");
@@ -61,17 +67,19 @@ const CustomerReg = () => {
       // Handle successful registration
       console.log("User added successfully!");
       alert("User added successfully!");
+      navigate("/home");
     } catch (error) {
       // Handle errors
       console.error("Error adding user:", error.message);
     }
 
     // Validate inputs before submitting
+    validateUserName();
     validateEmail();
     validatePassword();
     validateConfirmPassword();
 
-    if (emailValid && passwordValid && confirmPasswordValid) {
+    if (userNameValid && emailValid && passwordValid && confirmPasswordValid) {
       // Perform registration logic here
       console.log("Registration successful");
     } else {
@@ -94,6 +102,21 @@ const CustomerReg = () => {
         </div>
         <h3>Welcome to TropicMed</h3>
         <h4>Enter your Credentials to Register an account</h4>
+
+        <div
+          className={`floating-input-container ${emailValid ? "" : "invalid"}`}
+        >
+          <input
+            className="floating-input"
+            placeholder="User Name"
+            onChange={(e) => {
+              setUserName(e.target.value);
+              setUserNameValid(true); // Reset validation on input change
+            }}
+            onBlur={validateUserName}
+          />
+          <label className="form-label">User Name</label>
+        </div>
 
         <div
           className={`floating-input-container ${emailValid ? "" : "invalid"}`}
