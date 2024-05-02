@@ -207,6 +207,7 @@ p {
   height: 600px;
   border-radius: 10px;
   border: 1px solid #d8d8d8;
+  margin-right: 20px;
   /*margin-left: 20px;*/
   /*float: left;
     transition: 0.6s ease-in-out;
@@ -240,7 +241,8 @@ p {
 
 .stories-card-bottom {
   display: flex;
-  transform: translateY(2rem) translateX(-6px);
+  align-items: center;
+  transform: translateY(1rem) translateX(-6px);
 }
 
 .stories-card-bottom img {
@@ -260,10 +262,14 @@ p {
 .stories-card-bottom p,
 h5 {
   transform: translateX(10px);
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   /*position: relative;
     
     left: 16px;*/
+}
+
+.stories-card-bottom h5 {
+  margin-bottom: 9px;
 }
 
 .faq {
