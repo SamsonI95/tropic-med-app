@@ -41,9 +41,6 @@ function NavBar() {
   const userSignOut = async () => {
     try {
       await signOut(auth);
-      {
-        /*setMobileMenuOpen(!isMobileMenuOpen);*/
-      }
       // You may want to navigate or perform additional actions after sign-out
     } catch (error) {
       console.error("Error signing out", error);

@@ -1,5 +1,5 @@
 //App
-import React, { useEffect } from "react";
+import React from "react";
 import { useState } from "react";
 
 //Component
@@ -15,7 +15,6 @@ import "./Profile.css";
 
 import { auth, db } from "../../config/firebase";
 import { collection, addDoc } from "firebase/firestore";
-import { storage } from "../../config/firebase";
 
 const Profile = () => {
   const [button] = useState(true);
@@ -106,7 +105,13 @@ const Profile = () => {
             {/*<label className="p-form-label">Last Name</label>*/}
           </div>
           <div className="p-input-container">
-            <input type="text" className="p-input-field" placeholder="Email" />
+            <input
+              type="text"
+              className="p-input-field"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
             {/*<label className="p-form-label">Email</label>*/}
           </div>
           <div className="p-input-container">

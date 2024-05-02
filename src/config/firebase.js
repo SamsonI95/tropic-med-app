@@ -18,4 +18,4 @@ const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const db = getFirestore();
 export const storage = getStorage(app);
-const storageRef = ref(storage)
+export const storageRef = ref(storage)
