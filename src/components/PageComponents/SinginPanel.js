@@ -1,17 +1,20 @@
 //App
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { auth } from "../../config/firebase";
-import { signInWithEmailAndPassword } from "firebase/auth";
 
 //Component
 import { Button } from "../Reusables/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
-//Style
+//Server
+import { auth, provider } from "../../config/firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithPopup, signInWithRedirect } from "firebase/auth";
+import { getRedirectResult } from "firebase/auth";
 
+//Style
 import "./SinginPanel.css";
 
 const SinginPanel = () => {
@@ -46,6 +49,43 @@ const SinginPanel = () => {
       console.error("Error adding user:", error.message);
     }
   };
+
+  // Google Sign-In function
+  const googleclick = async () => {
+    await signInWithPopup(auth, provider);
+    console.log("Google Sign");
+    navigate("/home");
+  };
+
+  //using redirect for mobile platfrom
+  const googlerClick = async () => {
+    try {
+      // Trigger sign-in with redirect
+      await signInWithRedirect(auth, provider);
+      alert("Signed in successfully");
+      navigate("/home");
+    } catch (error) {
+      console.error(
+        "Error during Google sign-in with redirect:",
+        error.message
+      );
+    }
+  };
+
+  // Check for redirect result when the component mounts
+  useEffect(() => {
+    const checkRedirectResult = async () => {
+      try {
+        const result = await getRedirectResult(auth);
+        // Handle the redirect result, e.g., update UI or navigate to a new page
+        console.log("Redirect result:", result);
+      } catch (error) {
+        console.error("Error checking redirect result:", error.message);
+      }
+    };
+
+    checkRedirectResult();
+  }, []);
 
   return (
     <div className="sgn-main-container">
@@ -106,7 +146,7 @@ const SinginPanel = () => {
         </div>
         <div className="social-reg">
           {button && (
-            <Button buttonStyle="btn--outline" buttonSize="btn--social">
+            <Button buttonStyle="btn--outline" buttonSize="btn--social" onClick={googleclick}>
               <img src="assets/icons8-google-24.png" alt="google-icon" />
               Sign in with Google
             </Button>
