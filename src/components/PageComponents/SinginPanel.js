@@ -58,19 +58,19 @@ const SinginPanel = () => {
   };
 
   //using redirect for mobile platfrom
-  const googlerClick = async () => {
-    try {
-      // Trigger sign-in with redirect
-      await signInWithRedirect(auth, provider);
-      alert("Signed in successfully");
-      navigate("/home");
-    } catch (error) {
-      console.error(
-        "Error during Google sign-in with redirect:",
-        error.message
-      );
-    }
-  };
+  // const googlerClick = async () => {
+  //   try {
+  //     // Trigger sign-in with redirect
+  //     await signInWithRedirect(auth, provider);
+  //     alert("Signed in successfully");
+  //     navigate("/home");
+  //   } catch (error) {
+  //     console.error(
+  //       "Error during Google sign-in with redirect:",
+  //       error.message
+  //     );
+  //   }
+  // };
 
   // Check for redirect result when the component mounts
   useEffect(() => {
@@ -146,7 +146,11 @@ const SinginPanel = () => {
         </div>
         <div className="social-reg">
           {button && (
-            <Button buttonStyle="btn--outline" buttonSize="btn--social" onClick={googleclick}>
+            <Button
+              buttonStyle="btn--outline"
+              buttonSize="btn--social"
+              onClick={googleclick}
+            >
               <img src="assets/icons8-google-24.png" alt="google-icon" />
               Sign in with Google
             </Button>
