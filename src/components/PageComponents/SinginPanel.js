@@ -11,7 +11,7 @@ import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 //Server
 import { auth, provider } from "../../config/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { signInWithPopup, signInWithRedirect } from "firebase/auth";
+import { signInWithPopup } from "firebase/auth";
 import { getRedirectResult } from "firebase/auth";
 
 //Style
